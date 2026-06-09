@@ -2,6 +2,7 @@
 # 📊 Threat Profile: Fraudulent Recruitment & Remote Task Exploits
 
 ======================================================================================
+
 THREAT MATRIX IDENTIFIER: TM-CS-02  |  SEVERITY RATING: CRITICAL (Financial/Identity)
 TARGET SPECTRUM: Job Seekers, Unemployed Youth, Corporate Brands, Law Enforcement
 
