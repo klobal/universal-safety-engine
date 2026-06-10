@@ -1,1 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Awareness &amp; Safety Training Platform | Citizen Safety</title>
+    
+    <meta name="description" content="Access structured cybersecurity awareness programs, scam detection tracks, and enterprise workforce training matrices. Build real-world digital safety habits.">
+    <meta name="keywords" content="cybersecurity awareness, scam detection training, workforce phishing defense, M-Pesa fraud prevention, institutional digital safety">
+    <meta name="author" content="Citizen Safety &amp; Cyber Awareness System">
+    <meta name="robots" content="index, follow">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://safety.citizen.go.ke/training.html">
+    <meta property="og:title" content="Structured Cybersecurity Safety Training | Citizen Safety">
+    <meta property="og:description" content="Deploy evidence-based behavioral threat training across your enterprise, school, or SACCO. Zero panic, pure operational resilience.">
+    <meta property="og:image" content="assets/og-training-image.jpg">
+
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230b0f19'/><path d='M50 20 L75 35 L75 65 L50 80 L25 65 L25 35 Z' fill='none' stroke='%2306b6d4' stroke-width='5'/><circle cx='50' cy='50' r='8' fill='%233b82f6'/></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ACADEMIC-SECURITY SYSTEM DESIGN TOKENS --- */
+        :root {
+            /* Color Foundations - Deep Shield Dark Theme Baseline */
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-tertiary: #1f2937;
+            --bg-glass: rgba(17, 24, 39, 0.85);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            
+            /* Accent Core Matrix */
+            --accent-cyan: #06b6d4;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.12);
+            --accent-blue: #3b82f6;
+            --accent-blue-glow: rgba(59, 130, 246, 0.12);
+            --accent-green: #10b981;
+            --accent-green-glow: rgba(16, 185, 129, 0.12);
+            --accent-error: #ef4444;
+
+            /* Structural System Grid */
+            --max-width: 1280px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition-premium: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+            --shadow-cyan-glow: 0 0 30px rgba(6, 182, 212, 0.15);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.06);
+            --accent-blue-glow: rgba(59, 130, 246, 0.06);
+            --accent-green-glow: rgba(16, 185, 129, 0.06);
+            --shadow-premium: 0 20px 40px -15px rgba(15, 23, 42, 0.06);
+        }
+
+        /* --- GLOBAL BASICS & RESET MATRIX --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.625;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 120px 0; }
+        .section-header { text-align: center; max-width: 760px; margin: 0 auto 64px auto; }
+        .section-title {
+            font-size: 2.5rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 40%, var(--text-secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle { color: var(--text-secondary); font-size: 1.125rem; }
+
+        /* UI Atomic Badges & Buttons */
+        .badge {
+            display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 100px;
+            font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+            border: 1px solid currentColor; margin-bottom: 20px;
+        }
+        .badge-cyan { color: var(--accent-cyan); background: var(--accent-cyan-glow); }
+        .badge-blue { color: var(--accent-blue); background: var(--accent-blue-glow); }
+        .badge-green { color: var(--accent-green); background: var(--accent-green-glow); }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px;
+            font-size: 0.95rem; font-weight: 600; border-radius: var(--radius-sm); cursor: pointer;
+            transition: var(--transition-premium); text-decoration: none; border: none; gap: 10px;
+        }
+        .btn-primary { background-color: var(--accent-cyan); color: #0b0f19; box-shadow: var(--shadow-cyan-glow); }
+        .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn-secondary { background-color: transparent; color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background-color: var(--bg-tertiary); border-color: var(--text-secondary); }
+        
+        .btn-outline { 
+            background: transparent; 
+            border: 1px solid var(--border-color); 
+            color: var(--text-primary);
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition-premium);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            background: var(--accent-cyan-glow);
+            color: var(--accent-cyan);
+        }
+
+        /* --- 1. PREMIUM STICKY NAVIGATION BAR --- */
+        .nav-wrapper {
+            position: sticky; top: 0; z-index: 1000; background: var(--bg-glass);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color); transition: var(--transition-premium);
+        }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+        .logo-icon { width: 36px; height: 36px; stroke: var(--accent-cyan); fill: none; }
+        .logo-text { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+        .nav-link { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: var(--transition-premium); }
+        .nav-link:hover, .nav-link.active { color: var(--accent-cyan); }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        
+        .search-placeholder {
+            background: var(--bg-tertiary); border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm); padding: 8px 14px; font-size: 0.85rem;
+            color: var(--text-muted); width: 160px; cursor: not-allowed;
+        }
+        .theme-toggle {
+            background: none; border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+            width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            color: var(--text-secondary); transition: var(--transition-premium);
+        }
+        .theme-toggle:hover { color: var(--accent-cyan); background: var(--bg-tertiary); }
+        .theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; }
+        .menu-toggle { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; }
+
+        /* --- 2. HERO PLATFORM GATEWAY --- */
+        .hero-section {
+            padding: 160px 0 120px 0;
+            background: radial-gradient(circle at 20% 30%, var(--accent-blue-glow) 0%, transparent 55%);
+            text-align: center;
+        }
+        .hero-headline { font-size: 3.75rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 24px; }
+        .hero-headline span { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-supporting-text { font-size: 1.25rem; color: var(--text-secondary); max-width: 780px; margin: 0 auto 44px auto; }
+        .hero-ctas { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+        /* --- 3. STRUCTURED LEARNING PATH JOURNEY --- */
+        .pathway-section { background: var(--bg-secondary); border-y: 1px solid var(--border-color); }
+        .pathway-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; position: relative; }
+        .pathway-node { background: var(--bg-primary); border: 1px solid var(--border-color); padding: 32px; border-radius: var(--radius-md); position: relative; transition: var(--transition-premium); }
+        .pathway-node:hover { border-color: var(--accent-blue); transform: translateY(-4px); }
+        .node-level { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 12px; display: block; }
+        .node-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; }
+        .node-desc { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* --- 4. CORE TRAINING PROGRAMS CATALOG --- */
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 32px; }
+        .program-card {
+            background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+            padding: 40px; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition-premium);
+        }
+        .program-card:hover { border-color: var(--accent-cyan); box-shadow: var(--shadow-premium); }
+        .program-header { margin-bottom: 24px; }
+        .program-icon { width: 40px; height: 40px; stroke: var(--accent-cyan); fill: none; margin-bottom: 16px; }
+        .program-title { font-size: 1.35rem; font-weight: 600; margin-bottom: 12px; }
+        .program-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
+        .program-outcomes-list { list-style: none; margin-bottom: 32px; }
+        .program-outcomes-list li { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .program-outcomes-list li::before { content: '→'; color: var(--accent-cyan); font-weight: bold; }
+
+        /* --- 5. WHO THIS TRAINING IS FOR --- */
+        .audience-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .audience-card { background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 32px; border-radius: var(--radius-sm); transition: var(--transition-premium); }
+        .audience-card:hover { background: var(--bg-tertiary); }
+        .audience-title { font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary); }
+        .audience-benefit { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* --- 6. TRAINING FORMATS DELIVERY LAYER --- */
+        .formats-section { background: linear-gradient(135deg, #0b0f19 0%, #111827 100%); }
+        .formats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 42px; }
+        .format-box { display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); border: 1px solid transparent; transition: var(--transition-premium); }
+        .format-box:hover { border-color: var(--border-color); background: rgba(255, 255, 255, 0.02); }
+        .format-icon-wrap { background: var(--bg-tertiary); border-radius: var(--radius-sm); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; shrink: 0; stroke: var(--accent-blue); fill: none; }
+
+        /* --- 7. KEY LEARNING OUTCOMES METRICS --- */
+        .outcomes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; text-align: center; }
+        .outcome-metric-card { background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 40px 24px; border-radius: var(--radius-md); }
+        .outcome-stat { font-family: var(--font-mono); font-size: 2.5rem; font-weight: 700; color: var(--accent-green); margin-bottom: 8px; }
+
+        /* --- 8. CERTIFICATION / PROGRESS GATEWAY --- */
+        .cert-showcase { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 48px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
+        .cert-vector-mock { background: var(--bg-primary); border: 2px dashed var(--border-color); border-radius: var(--radius-sm); padding: 40px; text-align: center; font-family: var(--font-mono); color: var(--text-muted); position: relative; }
+        .cert-badge-mock { width: 80px; height: 80px; border: 4px double var(--accent-cyan); border-radius: 50%; margin: 0 auto 24px auto; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--accent-cyan); }
+
+        /* --- 9. WHY THIS TRAINING IS DIFFERENT --- */
+        .differentiation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .diff-card { border-left: 2px solid var(--accent-cyan); padding-left: 24px; }
+
+        /* --- 10. TRAINING STEPS PIPELINE --- */
+        .steps-wrapper { display: flex; justify-content: space-between; gap: 24px; position: relative; flex-wrap: wrap; }
+        .step-block { flex: 1; min-width: 200px; background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 32px; border-radius: var(--radius-sm); position: relative; }
+        .step-index { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 16px; display: block; }
+
+        /* --- 11. TRUST TESTING MODULE (TESTIMONIALS) --- */
+        .testimonial-carousel { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+        .testimonial-node { background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 40px; border-radius: var(--radius-md); }
+
+        /* --- 12. STRUCTURED CAPABILITY PACKAGES --- */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; max-width: 1100px; margin: 0 auto; }
+        .tier-card { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 48px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+        .tier-card.featured { border-color: var(--accent-blue); box-shadow: 0 0 40px rgba(59, 130, 246, 0.1); }
+        .tier-cost { font-family: var(--font-mono); font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin: 24px 0; }
+        .tier-cost span { font-size: 0.9rem; color: var(--text-secondary); font-family: var(--font-sans); font-weight: 400; }
+
+        /* --- 14. FAQ ACCORDION MANAGEMENT --- */
+        .faq-wrapper { max-width: 840px; margin: 0 auto; }
+        .faq-item { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-bottom: 16px; overflow: hidden; }
+        .faq-trigger { width: 100%; padding: 24px; background: none; border: none; text-align: left; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-icon { width: 20px; height: 20px; stroke: var(--text-secondary); fill: none; transition: var(--transition-premium); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1); padding: 0 24px; color: var(--text-secondary); }
+        .faq-item.active .faq-content { max-height: 300px; padding-bottom: 24px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); stroke: var(--accent-cyan); }
+
+        /* --- 15. FOOTER FRAMEWORK --- */
+        .footer-wrapper { background-color: #080b11; border-top: 1px solid var(--border-color); padding: 96px 0 48px 0; color: var(--text-secondary); }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 48px; margin-bottom: 64px; }
+        .footer-heading { color: var(--text-primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 24px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: var(--transition-premium); }
+        .footer-links a:hover { color: var(--accent-cyan); }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 0.85rem; }
+
+        /* --- RECONFIGURED LAYOUT RESPONSIVENESS MATRIX --- */
+        @media (max-width: 1024px) {
+            .pathway-timeline { grid-template-columns: repeat(2, 1fr); }
+            .formats-grid { grid-template-columns: 1fr; }
+            .cert-showcase { grid-template-columns: 1fr; gap: 40px; }
+            .differentiation-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .search-placeholder { display: none; }
+            .menu-toggle { display: block; }
+            .hero-headline { font-size: 2.5rem; }
+            .pathway-timeline { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-wrapper">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area" aria-label="Home Platform Link">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+            </a>
+            
+            <nav role="navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="library.html" class="nav-link">Threat Library</a></li>
+                    <li><a href="index.html#emergency" class="nav-link">Quick Help</a></li>
+                    <li><a href="prevention.html" class="nav-link">Prevention</a></li>
+                    <li><a href="training.html" class="nav-link active">Training</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-placeholder">Press / to search...</div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle system color theme">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </button>
+                <a href="index.html#emergency" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; background-color: var(--accent-error); color:#fff; box-shadow:none;">Emergency Hub</a>
+                <button class="menu-toggle" aria-label="Trigger Responsive Navbar Menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <span class="badge badge-blue">Knowledge Academy Matrix</span>
+            <h1 class="hero-headline">Structured Cybersecurity <span>Awareness &amp; Safety Training</span></h1>
+            <p class="hero-supporting-text">Learn how to defend yourself, your family, and your institutional networks from digital fraud loops, spear phishing, and social engineering traps via data-driven courses.</p>
+            <div class="hero-ctas">
+                <a href="#courses" class="btn btn-primary">Explore Courses Catalog</a>
+                <a href="#pathway" class="btn btn-secondary">Review Learning Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pathway" class="section-padding pathway-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Progress Infrastructure</span>
+                <h2 class="section-title">The Capability Architecture</h2>
+                <p class="section-subtitle">A simple, progressive system that builds user confidence step by step, turning basic awareness into advanced defense skills.</p>
+            </div>
+
+            <div class="pathway-timeline">
+                <div class="pathway-node">
+                    <span class="node-level">Level 01</span>
+                    <h3 class="node-title">Basic Awareness</h3>
+                    <p class="node-desc">Master threat terminology, identify standard scam loops, and secure critical personal accounts.</p>
+                </div>
+                <div class="pathway-node">
+                    <span class="node-level">Level 02</span>
+                    <h3 class="node-title">Scam Interception</h3>
+                    <p class="node-desc">Analyze social engineering behaviors, spot fake jobs, and handle mobile transaction risks.</p>
+                </div>
+                <div class="pathway-node">
+                    <span class="node-level">Level 03</span>
+                    <h3 class="node-title">Digital Mastery</h3>
+                    <p class="node-desc">Implement strong encryption, minimize public data exposure, and isolate untrusted devices.</p>
+                </div>
+                <div class="pathway-node">
+                    <span class="node-level">Level 04</span>
+                    <h3 class="node-title">Workforce Shield</h3>
+                    <p class="node-desc">Deploy corporate verification policies, manage data safely, and mitigate internal operational risks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-green">Curriculum Core</span>
+            <h2 class="section-title">Targeted Safety Programs</h2>
+            <p class="section-subtitle">Rigorous, non-technical training syllabi crafted to target specific regional and institutional threat factors.</p>
+        </div>
+
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-header">
+                    <svg class="program-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11.57V11a5.002 5.002 0 1110 0c0 1.053-.162 2.068-.462 3.017m-1.484 3.931A8.962 8.962 0 0118 19,8.963 8.963 0 0118 4V3M4 14h.01" /></svg>
+                    <h3 class="program-title">Cybersecurity Awareness Basics</h3>
+                    <p class="program-desc">Essential fundamentals covering standard passwords, suspicious link identification, and browser hygiene tracks.</p>
+                </div>
+                <ul class="program-outcomes-list">
+                    <li>Build robust multi-factor setups</li>
+                    <li>Spot deceptive URL redirections</li>
+                    <li>Secure home network router channels</li>
+                </ul>
+                <a href="contact.html?course=basics" class="btn btn-outline">Request Blueprint Access</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-header">
+                    <svg class="program-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <h3 class="program-title">Scam Interception Framework</h3>
+                    <p class="program-desc">Deep deconstruction of local transaction traps, spoofed SMS lines, and advanced artificial hiring scams.</p>
+                </div>
+                <ul class="program-outcomes-list">
+                    <li>Intercept active mobile escrow traps</li>
+                    <li>Identify synthetic recruitment offers</li>
+                    <li>Verify real organizational contacts</li>
+                </ul>
+                <a href="contact.html?course=scam" class="btn btn-outline" style="border-color: var(--accent-blue); color: var(--accent-blue);">Request Class Placement</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-header">
+                    <svg class="program-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    <h3 class="program-title">Institutional Defense Matrix</h3>
+                    <p class="program-desc">Custom compliance training built for corporate employees, SACCO operators, and NGO field teams.</p>
+                </div>
+                <ul class="program-outcomes-list">
+                    <li>Isolate spear phishing patterns</li>
+                    <li>Validate invoice adjustment logs</li>
+                    <li>Protect vital organizational client lists</li>
+                </ul>
+                <a href="contact.html?course=enterprise" class="btn btn-outline">Request Corporate Intake</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--bg-secondary); border-y: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-blue">Ecosystem Targets</span>
+                <h2 class="section-title">Tailored and Context-Aware Ecosystem Placement</h2>
+                <p class="section-subtitle">Every module is structured around the unique operational realities and specific needs of the learner's domain.</p>
+            </div>
+
+            <div class="audience-matrix">
+                <div class="audience-card">
+                    <h3 class="audience-title">Individuals &amp; Students</h3>
+                    <p class="audience-benefit">Protect identity assets, shield financial lines, and maintain clear digital tracks.</p>
+                </div>
+                <div class="audience-card">
+                    <h3 class="audience-title">SMEs &amp; Local SACCOs</h3>
+                    <p class="audience-benefit">Block invoice adjustments, halt rogue payment actions, and satisfy regional data compliance audits.</p>
+                </div>
+                <div class="audience-card">
+                    <h3 class="audience-title">NGOs &amp; State Agencies</h3>
+                    <p class="audience-benefit">Secure field tracking telemetry, protect vulnerable registry logs, and establish clear verification steps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding formats-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Deployment Systems</span>
+                <h2 class="section-title">Flexible Instructional Layouts</h2>
+                <p class="section-subtitle">How we deliver actionable cybersecurity knowledge seamlessly into active, modern operational schedules.</p>
+            </div>
+
+            <div class="formats-grid">
+                <div class="format-box">
+                    <div class="format-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <div>
+                        <h3 style="font-size:1.2rem; margin-bottom:8px;">Online Self-Paced Modules</h3>
+                        <p style="color:var(--text-secondary); font-size:0.95rem;">Interactive step-by-step tracks, sandbox threat interfaces, and clear video deconstructions accessible anytime.</p>
+                    </div>
+                </div>
+
+                <div class="format-box">
+                    <div class="format-icon-wrap">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <div>
+                        <h3 style="font-size:1.2rem; margin-bottom:8px;">In-Person Group Intensives</h3>
+                        <p style="color:var(--text-secondary); font-size:0.95rem;">Highly interactive simulation labs, live physical threat scenarios, and collaborative system design table discussions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-green">Impact Evaluation</span>
+            <h2 class="section-title">Verifiable Outcomes-Based Growth</h2>
+            <p class="section-subtitle">Our training moves past passive attendance, prioritizing clear, measurable risk reduction in day-to-day operations.</p>
+        </div>
+
+        <div class="outcomes-grid">
+            <div class="outcome-metric-card">
+                <div class="outcome-stat">94%</div>
+                <h4 style="margin-bottom:8px;">Scam Interception</h4>
+                <p style="color:var(--text-secondary); font-size:0.85rem;">Improvement in tracking and stopping deceptive links within two weeks of deployment.</p>
+            </div>
+            <div class="outcome-metric-card">
+                <div class="outcome-stat">-80%</div>
+                <h4 style="margin-bottom:8px;">Financial Risk Drop</h4>
+                <p style="color:var(--text-secondary); font-size:0.85rem;">Reduction in successful financial impersonation events across our corporate cohorts.</p>
+            </div>
+            <div class="outcome-metric-card">
+                <div class="outcome-stat">&lt;3 Min</div>
+                <h4 style="margin-bottom:8px;">Rapid Incident Log</h4>
+                <p style="color:var(--text-secondary); font-size:0.85rem;">Average reporting time for threat discoveries directly to internal IT controllers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 120px;">
+        <div class="cert-showcase">
+            <div>
+                <span class="badge badge-cyan">Future-Ready Layer</span>
+                <h2 style="font-size:2rem; font-weight:700; margin-bottom:16px;">Verifiable Safety Credentials</h2>
+                <p style="color:var(--text-secondary); margin-bottom:24px;">Earn verifiable completions tracked via cryptographic signatures, providing solid proof of compliance to auditors and partner networks.</p>
+                <div style="font-family:var(--font-mono); font-size:0.85rem; color:var(--accent-blue);">Status Matrix: Infrastructure In Development Phase</div>
+            </div>
+            <div class="cert-vector-mock">
+                <div class="cert-badge-mock">SEC</div>
+                <h5>VERIFIED DEFENDER</h5>
+                <p style="font-size:0.75rem; margin-top:12px; color:var(--text-muted);">ID: 0x98AF72... LEVEL 03 COMPLIANT</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding" style="border-top:1px solid var(--border-color);">
+        <div class="section-header">
+            <span class="badge badge-blue">Strategic Focus</span>
+            <h2 class="section-title">Beyond Standard Cyber Compliance</h2>
+            <p class="section-subtitle">Why our behavioral defense framework delivers long-term protective results where typical video check-boxes fail.</p>
+        </div>
+
+        <div class="differentiation-grid">
+            <div class="diff-card">
+                <h4 style="margin-bottom:10px; font-size:1.15rem;">Evidence-Based Threat Models</h4>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">We drop generic textbooks, building training directly from real cyber assets and recorded local social engineering patterns.</p>
+            </div>
+            <div class="diff-card">
+                <h4 style="margin-bottom:10px; font-size:1.15rem;">No Technical Background Needed</h4>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">We break down complex technical topics into practical daily actions that any worker or community member can use immediately.</p>
+            </div>
+            <div class="diff-card">
+                <h4 style="margin-bottom:10px; font-size:1.15rem;">Continuous Verification Loops</h4>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">We use post-training follow-up checks to ensure defensive habits remain sharp against new, evolving threat vectors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background:var(--bg-secondary); border-top:1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">The Pipeline</span>
+                <h2 class="section-title">Systematic Onboarding Operations</h2>
+                <p class="section-subtitle">How we guide your team from initial threat profiling to deployment and verified safety standing.</p>
+            </div>
+
+            <div class="steps-wrapper">
+                <div class="step-block">
+                    <span class="step-index">01 / Selection</span>
+                    <h4 style="margin-bottom:8px;">Choose Track</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Select the training program blueprint that best fits your individual or team's operational needs.</p>
+                </div>
+                <div class="step-block">
+                    <span class="step-index">02 / Profiling</span>
+                    <h4 style="margin-bottom:8px;">Submit Intake Request</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Share your team's specific size and workflow realities securely through our contact setup.</p>
+                </div>
+                <div class="step-block">
+                    <span class="step-index">03 / Launch</span>
+                    <h4 style="margin-bottom:8px;">Execute Deployment</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Participate in interactive hybrid classes and simulation labs engineered for deep retention.</p>
+                </div>
+                <div class="step-block">
+                    <span class="step-index">04 / Tracking</span>
+                    <h4 style="margin-bottom:8px;">Follow-Up Checks</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Receive simple follow-up evaluations to check and maintain long-term team safety performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-green">Platform Validation</span>
+            <h2 class="section-title">Cohort Case Records</h2>
+            <p class="section-subtitle">Real-world feedback from risk managers and educational administrators who have deployed our safety programs.</p>
+        </div>
+
+        <div class="testimonial-carousel">
+            <div class="testimonial-node">
+                <p style="font-style:italic; color:var(--text-secondary); font-size:0.95rem; margin-bottom:24px;">&ldquo;The scam deconstruction scenarios were highly eye-opening. Our operations group identified and isolated a fake payment routing attempt just three days after finishing the course.&rdquo;</p>
+                <h5 style="color:var(--text-primary);">Head of Operational Risk</h5>
+                <p style="font-size:0.8rem; color:var(--text-muted);">Commercial Agriculture Cooperative</p>
+            </div>
+            <div class="testimonial-node">
+                <p style="font-style:italic; color:var(--text-secondary); font-size:0.95rem; margin-bottom:24px;">&ldquo;We needed clear, practical digital security education that resonated with students. This program provided exact, low-stress protection plans that made sense.&rdquo;</p>
+                <h5 style="color:var(--text-primary);">Dean of Student Lifecycle</h5>
+                <p style="font-size:0.8rem; color:var(--text-muted);">Technical Training Institute Consortium</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background:var(--bg-secondary); border-top:1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-blue">Ethical Packaging</span>
+                <h2 class="section-title">Clear Educational Resource Commitments</h2>
+                <p class="section-subtitle">Structured, upfront packaging options built to provide sustainable support for community networks and enterprise safety scales.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="tier-card">
+                    <div>
+                        <h4 style="font-size:1.25rem;">Individual Safety Seat</h4>
+                        <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:4px;">For solo practitioners, tech students, or small offices.</p>
+                        <div class="tier-cost">KES 3,500 <span>/ User</span></div>
+                        <ul style="list-style:none; font-size:0.9rem; color:var(--text-secondary);">
+                            <li style="margin-bottom:8px;">• Full access to online self-paced courses</li>
+                            <li style="margin-bottom:8px;">• Live interactive chat threat alerts</li>
+                            <li style="margin-bottom:8px;">• Digital safety credential log</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html?tier=individual" class="btn btn-outline" style="margin-top:32px;">Initialize Access Path</a>
+                </div>
+
+                <div class="tier-card featured" style="background: var(--bg-primary);">
+                    <div>
+                        <h4 style="font-size:1.25rem;">Institutional Core Matrix</h4>
+                        <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:4px;">Complete protection coverage built for teams and SACCO units.</p>
+                        <div class="tier-cost">KES 85,000 <span>/ Cohort</span></div>
+                        <ul style="list-style:none; font-size:0.9rem; color:var(--text-secondary);">
+                            <li style="margin-bottom:8px;">• Live hybrid workshops for up to 30 workers</li>
+                            <li style="margin-bottom:8px;">• Custom simulation tests for regional scams</li>
+                            <li style="margin-bottom:8px;">• Detailed executive risk summary log</li>
+                            <li style="margin-bottom:8px;">• 60-day post-training health check</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html?tier=institutional" class="btn btn-primary" style="margin-top:32px; width:100%;">Deploy Institutional Path</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-cyan">Knowledge Check</span>
+            <h2 class="section-title">Training Architecture FAQ</h2>
+            <p class="section-subtitle">Answers to common operational questions regarding curriculum customization, technical baselines, and certification metrics.</p>
+        </div>
+
+        <div class="faq-wrapper">
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    What primary skills are gained through these security programs?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>Learners master the ability to quickly spot deceptive social engineering patterns, isolate spoofed corporate communications, verify payment transactions, and properly use strong identity access setups.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    Can organizations request custom modules for internal workflow protection?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>Yes. For institutional tiers, we customize our simulation exercises to match your specific internal tools, operational patterns, and regulatory constraints.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    How is credential verification checked over the long term?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>Every completed certificate links back to a secure cryptographic signature hosted on our verification lookup platform, making it easy for compliance officers to instantly check training validity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 100%); text-align: center;">
+        <div class="container">
+            <h2 style="font-size:2.25rem; font-weight:700; margin-bottom:16px;">Build Actionable Digital Defense Resilience</h2>
+            <p style="color:var(--text-secondary); max-width:640px; margin:0 auto 32px auto; font-size:1.1rem;">Register your group or start your individual self-paced training track immediately to improve your security positioning.</p>
+            <a href="contact.html?intent=onboard" class="btn btn-primary">Initiate Platform Enrollment</a>
+        </div>
+    </section>
+
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo-area" style="margin-bottom: 20px;">
+                        <svg class="logo-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                        <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+                    </a>
+                    <p style="font-size:0.9rem; line-height:1.65; color:var(--text-secondary);">Providing evidence-based threat training and practical defense playbooks to replace generic, stressful security alerts with reliable, actionable habits.</p>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Academy Hubs</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#emergency">Emergency Support Portal</a></li>
+                        <li><a href="library.html">Threat Database Repository</a></li>
+                        <li><a href="tools.html">Cryptographic Query Systems</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Platform Roots</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Strategy &amp; Vision</a></li>
+                        <li><a href="services.html">Bespoke Enterprise Support</a></li>
+                        <li><a href="legal/privacy.html">Data Retention Protocols</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Compliance Sync</h5>
+                    <ul class="footer-links">
+                        <li><a href="legal/terms.html">Usage Boundary Conditions</a></li>
+                        <li><a href="legal/liability.html">Liability Disclaimers</a></li>
+                        <li><a href="partners/government.html">State Security Operations</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Citizen Safety Ecosystem. All global sovereign rights reserved. Built to KeCIRT / NIST cyber-hygiene baselines.</p>
+                <a href="#" style="color: var(--text-muted); text-decoration:none;">Apex Interface Anchor &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Switcher Layer Handler
+            const themeToggle = document.getElementById('themeToggle');
+            const cachedTheme = localStorage.getItem('training-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', cachedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const activeTheme = document.documentElement.getAttribute('data-theme');
+                const switchTarget = activeTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', switchTarget);
+                localStorage.setItem('training-theme', switchTarget);
+            });
+
+            // Smooth Accordion Animation Controller
+            const accordionButtons = document.querySelectorAll('.faq-trigger');
+            accordionButtons.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const blockItem = trigger.parentElement;
+                    const isActive = blockItem.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                    document.querySelectorAll('.faq-trigger').forEach(el => el.setAttribute('aria-expanded', 'false'));
+                    
+                    if (!isActive) {
+                        blockItem.classList.add('active');
+                        trigger.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Key Intercept Global Routine for Quick Search Launch
+            document.addEventListener('keydown', (event) => {
+                if (event.key === '/') {
+                    event.preventDefault();
+                    alert("Training Engine Notice: Central index node validation is currently loading database structures.");
+                }
+            });
+
+            // Mobile Responsive Menu Toggle Handler
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinksContainer = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navLinksContainer.style.display === 'flex';
+                if (isOpen) {
+                    navLinksContainer.style.display = 'none';
+                } else {
+                    navLinksContainer.style.display = 'flex';
+                    navLinksContainer.style.flexDirection = 'column';
+                    navLinksContainer.style.position = 'absolute';
+                    navLinksContainer.style.top = '88px';
+                    navLinksContainer.style.left = '0';
+                    navLinksContainer.style.width = '100%';
+                    navLinksContainer.style.backgroundColor = 'var(--bg-secondary)';
+                    navLinksContainer.style.padding = '32px';
+                    navLinksContainer.style.borderBottom = '1px solid var(--border-color)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
