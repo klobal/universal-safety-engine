@@ -1,1 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Cybersecurity Services &amp; Training Hub | Citizen Safety</title>
+    
+    <meta name="description" content="Explore our trust-based cybersecurity awareness training, digital risk audits, and institutional scam prevention frameworks. Engineered for SMEs, SACCOs, NGOs, and state bodies.">
+    <meta name="keywords" content="cybersecurity training, fraud prevention audit, corporate digital safety, SACCO compliance, M-Pesa scam mitigation">
+    <meta name="author" content="Citizen Safety &amp; Cyber Awareness System">
+    <meta name="robots" content="index, follow">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://safety.citizen.go.ke/services.html">
+    <meta property="og:title" content="Institutional Security Services &amp; Training | Citizen Safety">
+    <meta property="og:description" content="Deploy rigorous, trust-driven cyber awareness programs across your workforce. Custom mitigation strategies for modern digital threats.">
+    <meta property="og:image" content="assets/og-services-image.jpg">
+
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230f172a'/><path d='M50 25 L70 40 L70 65 L50 80 L30 65 L30 40 Z' fill='none' stroke='%2306b6d4' stroke-width='5'/></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- SYSTEM DESIGN TOKENS --- */
+        :root {
+            /* Color Foundations - Deep Shield Palette */
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-tertiary: #1f2937;
+            --bg-glass: rgba(17, 24, 39, 0.8);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            
+            /* Accent Core Matrix */
+            --accent-cyan: #06b6d4;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.12);
+            --accent-blue: #3b82f6;
+            --accent-blue-glow: rgba(59, 130, 246, 0.12);
+            --accent-green: #10b981;
+            --accent-green-glow: rgba(16, 185, 129, 0.12);
+            --accent-error: #ef4444;
+
+            /* Structural System Grid */
+            --max-width: 1280px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition-premium: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+            --shadow-cyan-glow: 0 0 30px rgba(6, 182, 212, 0.15);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.06);
+            --accent-blue-glow: rgba(59, 130, 246, 0.06);
+            --accent-green-glow: rgba(16, 185, 129, 0.06);
+            --shadow-premium: 0 20px 40px -15px rgba(15, 23, 42, 0.06);
+        }
+
+        /* --- GLOBAL BASICS & RESET MATRIX --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.625;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 120px 0; }
+        .section-header { text-align: center; max-width: 760px; margin: 0 auto 64px auto; }
+        .section-title {
+            font-size: 2.5rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 40%, var(--text-secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle { color: var(--text-secondary); font-size: 1.125rem; }
+
+        /* UI Atomic Tokens */
+        .badge {
+            display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 100px;
+            font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+            border: 1px solid currentColor; margin-bottom: 20px;
+        }
+        .badge-cyan { color: var(--accent-cyan); background: var(--accent-cyan-glow); }
+        .badge-blue { color: var(--accent-blue); background: var(--accent-blue-glow); }
+        .badge-green { color: var(--accent-green); background: var(--accent-green-glow); }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px;
+            font-size: 0.95rem; font-weight: 600; border-radius: var(--radius-sm); cursor: pointer;
+            transition: var(--transition-premium); text-decoration: none; border: none; gap: 10px;
+        }
+        .btn-primary { background-color: var(--accent-cyan); color: #0b0f19; box-shadow: var(--shadow-cyan-glow); }
+        .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn-secondary { background-color: transparent; color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background-color: var(--bg-tertiary); border-color: var(--text-secondary); }
+        
+        .btn-outline { 
+            background: transparent; 
+            border: 1px solid var(--border-color); 
+            color: var(--text-primary);
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+        }
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            background: var(--accent-cyan-glow);
+            color: var(--accent-cyan);
+        }
+
+        /* --- 1. PREMIUM STICKY NAVIGATION BAR --- */
+        .nav-wrapper {
+            position: sticky; top: 0; z-index: 1000; background: var(--bg-glass);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color); transition: var(--transition-premium);
+        }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+        .logo-icon { width: 36px; height: 36px; stroke: var(--accent-cyan); fill: none; }
+        .logo-text { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+        .nav-link { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: var(--transition-premium); }
+        .nav-link:hover, .nav-link.active { color: var(--accent-cyan); }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        
+        .search-placeholder {
+            background: var(--bg-tertiary); border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm); padding: 8px 14px; font-size: 0.85rem;
+            color: var(--text-muted); width: 160px; cursor: not-allowed;
+        }
+        .theme-toggle {
+            background: none; border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+            width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            color: var(--text-secondary); transition: var(--transition-premium);
+        }
+        .theme-toggle:hover { color: var(--accent-cyan); background: var(--bg-tertiary); }
+        .theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; }
+        .menu-toggle { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; }
+
+        /* --- 2. HERO SECTION --- */
+        .hero-section {
+            padding: 160px 0 120px 0;
+            background: radial-gradient(circle at 80% 20%, var(--accent-cyan-glow) 0%, transparent 60%);
+            text-align: center;
+        }
+        .hero-headline { font-size: 3.75rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 24px; }
+        .hero-headline span { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-supporting-text { font-size: 1.25rem; color: var(--text-secondary); max-width: 760px; margin: 0 auto 44px auto; }
+        .hero-ctas { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+        /* --- 3. CORE SERVICES OVERVIEW --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 32px; }
+        .service-card {
+            background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+            padding: 40px; transition: var(--transition-premium); display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .service-card:hover { border-color: var(--accent-cyan); transform: translateY(-4px); box-shadow: var(--shadow-premium); }
+        .service-icon { width: 48px; height: 48px; stroke: var(--accent-cyan); fill: none; margin-bottom: 24px; }
+        .service-metrics { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-blue); margin-top: 16px; display: block; }
+
+        /* --- 4. TARGET AUDIENCE SEGMENTATION --- */
+        .audience-section { background: var(--bg-secondary); border-y: 1px solid var(--border-color); }
+        .audience-tabs { display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; }
+        .tab-btn {
+            background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-secondary);
+            padding: 10px 24px; border-radius: 100px; cursor: pointer; font-weight: 500; font-size: 0.9rem; transition: var(--transition-premium);
+        }
+        .tab-btn.active, .tab-btn:hover { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+        .audience-content-box { 
+            background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); 
+            padding: 48px; display: none; animation: fadeIn 0.4s ease-out;
+        }
+        .audience-content-box.active { display: block; }
+
+        /* --- 5. DETAILED TRAINING PROGRAMS CATALOG --- */
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 32px; }
+        .program-card {
+            background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+            padding: 36px; position: relative; overflow: hidden;
+        }
+        .program-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--border-color); transition: var(--transition-premium);
+        }
+        .program-card:hover::before { background: var(--accent-green); }
+        .program-meta { display: flex; justify-content: space-between; font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 16px; }
+        .program-outcomes { list-style: none; margin: 20px 0 28px 0; }
+        .program-outcomes li { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .program-outcomes li::before { content: '✓'; color: var(--accent-green); font-weight: bold; }
+
+        /* --- 6. CONSULTANCY & ENTERPRISE MATRIX --- */
+        .enterprise-wrapper { background: linear-gradient(135deg, #0b0f19 0%, #111827 100%); position: relative; }
+        .enterprise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .spec-list { list-style: none; margin-top: 24px; }
+        .spec-item { padding: 16px 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 16px; }
+        .spec-indicator { width: 8px; height: 8px; background: var(--accent-cyan); border-radius: 50%; }
+
+        /* --- 7. WHY CHOOSE US (TRUST ENGINEERING) --- */
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+        .trust-card { border-left: 2px solid var(--accent-blue); padding-left: 24px; }
+
+        /* --- 8. PROCESS PIPELINE TRACK --- */
+        .process-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 48px; }
+        .process-step { background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 32px; border-radius: var(--radius-sm); position: relative; }
+        .process-num { font-family: var(--font-mono); font-size: 2.5rem; font-weight: 700; color: rgba(6, 182, 212, 0.15); position: absolute; top: 12px; right: 20px; }
+
+        /* --- 9. TRUST TESTIMONIAL CARDS --- */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+        .testimonial-card { background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 40px; border-radius: var(--radius-md); }
+        .client-profile { display: flex; align-items: center; gap: 16px; margin-top: 24px; }
+        .client-avatar { width: 44px; height: 44px; background: var(--bg-tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; color: var(--accent-cyan); border: 1px solid var(--border-color); }
+
+        /* --- 10. STRUCTURED ETHICAL PACKAGES --- */
+        .pricing-section { background: var(--bg-secondary); border-y: 1px solid var(--border-color); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; max-width: 1100px; margin: 0 auto; }
+        .price-card { background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 48px 40px; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+        .price-card.featured { border-color: var(--accent-cyan); box-shadow: var(--shadow-cyan-glow); }
+        .price-tag { font-family: var(--font-mono); font-size: 2.25rem; font-weight: 700; color: var(--text-primary); margin: 24px 0; }
+        .price-tag span { font-size: 0.9rem; color: var(--text-secondary); font-family: var(--font-sans); font-weight: 400; }
+
+        /* --- 11. FAQ ACCORDION PIPELINE --- */
+        .faq-wrapper { max-width: 840px; margin: 0 auto; }
+        .faq-item { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-bottom: 16px; overflow: hidden; }
+        .faq-trigger { width: 100%; padding: 24px; background: none; border: none; text-align: left; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-icon { width: 20px; height: 20px; stroke: var(--text-secondary); fill: none; transition: var(--transition-premium); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1); padding: 0 24px; color: var(--text-secondary); }
+        .faq-item.active .faq-content { max-height: 300px; padding-bottom: 24px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); stroke: var(--accent-cyan); }
+
+        /* --- 12. CALL TO ACTION INTERFACE --- */
+        .cta-strip { background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 100%); text-align: center; }
+
+        /* --- 13. PREMIUM ARCHITECTURE FOOTER --- */
+        .footer-wrapper { background-color: #080b11; border-top: 1px solid var(--border-color); padding: 96px 0 48px 0; color: var(--text-secondary); }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 48px; margin-bottom: 64px; }
+        .footer-heading { color: var(--text-primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 24px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: var(--transition-premium); }
+        .footer-links a:hover { color: var(--accent-cyan); }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 0.85rem; }
+
+        /* --- KEYFRAME ANIMATION LIBRARY --- */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- RESPONSIVE MEDIA SPECIFICATION MATRIX --- */
+        @media (max-width: 1024px) {
+            .enterprise-grid { grid-template-columns: 1fr; gap: 48px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .search-placeholder { display: none; }
+            .menu-toggle { display: block; }
+            .hero-headline { font-size: 2.5rem; }
+            .audience-content-box { padding: 32px 20px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-wrapper">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area" aria-label="Home Interface Link">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+            </a>
+            
+            <nav role="navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="library.html" class="nav-link">Threat Library</a></li>
+                    <li><a href="index.html#emergency" class="nav-link">Quick Help</a></li>
+                    <li><a href="prevention.html" class="nav-link">Prevention</a></li>
+                    <li><a href="training.html" class="nav-link">Training</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-placeholder">Press / to search...</div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch visual style layer">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <a href="index.html#emergency" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; background-color: var(--accent-error); color:#fff; box-shadow:none;">Emergency Hub</a>
+                <button class="menu-toggle" aria-label="Trigger Responsive Menu Layer">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <span class="badge badge-cyan">Capabilities Matrix</span>
+            <h1 class="hero-headline">Professional Cybersecurity <span>Awareness &amp; Safety</span></h1>
+            <p class="hero-supporting-text">We help organizations, state institutions, and individuals build systematic defense resilience against social engineering, digital fraud loops, and infrastructure threats.</p>
+            <div class="hero-ctas">
+                <a href="#core-services" class="btn btn-primary">Explore Services System</a>
+                <a href="#pricing" class="btn btn-secondary">Institutional Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="core-services" class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-blue">Service Domains</span>
+            <h2 class="section-title">Structured Resilience Offerings</h2>
+            <p class="section-subtitle">Rigorous, non-alarmist intervention programs designed to protect financial, educational, and operational frameworks.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 12px;">Cyber Awareness Systems</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Localized security training for school networks, small teams, and private users vulnerable to digital exploits.</p>
+                    <span class="service-metrics">System Tracker: Level 1-3 Compliance</span>
+                </div>
+                <a href="contact.html?intent=training" class="btn btn-outline" style="margin-top: 32px;">Initialize Evaluation</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 12px;">Fraud Prevention Infrastructure</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Targeted toolsets mapping transaction traps, social engineering lines, and mobile money fraud vectors.</p>
+                    <span class="service-metrics">Mitigation Vectors: M-Pesa / Card Systems</span>
+                </div>
+                <a href="contact.html?intent=incident" class="btn btn-outline" style="margin-top: 32px;">Analyze Exploit Channels</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <svg class="service-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 12px;">Enterprise Risk Auditing</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Rigorous human-layer exposure validation, identity system safety mapping, and organizational security assessments.</p>
+                    <span class="service-metrics">Standards: NIST / KeCIRT Baselines</span>
+                </div>
+                <a href="contact.html?intent=partner" class="btn btn-outline" style="margin-top: 32px;">Audit Corporate Footprint</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding audience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-green">Ecosystem Targets</span>
+                <h2 class="section-title">Designed for Every Structural Layer</h2>
+                <p class="section-subtitle">Select your institutional framework context to review custom security baselines.</p>
+            </div>
+
+            <div class="audience-tabs">
+                <button class="tab-btn active" onclick="switchAudience(event, 'aud-sme')">SMEs &amp; SACCOs</button>
+                <button class="tab-btn" onclick="switchAudience(event, 'aud-gov')">State &amp; Law Enforcement</button>
+                <button class="tab-btn" onclick="switchAudience(event, 'aud-edu')">Schools &amp; NGOs</button>
+            </div>
+
+            <div id="aud-sme" class="audience-content-box active">
+                <h3 style="margin-bottom: 16px; font-size:1.5rem;">Securing Local Financial &amp; Trade Hubs</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 24px; max-width: 900px;">Small enterprises and credit unions (SACCOs) face heavy exposure to insider payment loops, credential fishing, and unauthorized platform access. Our specialized workshops build human tracking layers that safeguard transactional entries without disrupting day-to-day work paths.</p>
+                <a href="contact.html?intent=partner" class="btn btn-secondary" style="font-size:0.85rem;">Request Business Assessment Matrix &rarr;</a>
+            </div>
+
+            <div id="aud-gov" class="audience-content-box">
+                <h3 style="margin-bottom: 16px; font-size:1.5rem;">Sovereign Telemetry Integration</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 24px; max-width: 900px;">We collaborate with regulatory authorities and investigative teams, streaming data trends to shorten the response time of active regional threat loops. Our compliance tracks align strictly with national data protection laws.</p>
+                <a href="contact.html?intent=partner" class="btn btn-secondary" style="font-size:0.85rem;">Initiate Institutional Intake Protocol &rarr;</a>
+            </div>
+
+            <div id="aud-edu" class="audience-content-box">
+                <h3 style="margin-bottom: 16px; font-size:1.5rem;">Community &amp; Academic Digital Safeguards</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 24px; max-width: 900px;">Protecting student populations and field teams from synthetic employment rackets and identity theft. We offer practical, low-barrier educational plans to build core resilience across distributed groups.</p>
+                <a href="contact.html?intent=training" class="btn btn-secondary" style="font-size:0.85rem;">Request Academic Syllabus Kit &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-cyan">Educational Tracks</span>
+            <h2 class="section-title">Verified Cybersecurity Training Curriculums</h2>
+            <p class="section-subtitle">Practical programs built to turn behavioral patterns from key liabilities into active defensive advantages.</p>
+        </div>
+
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-meta">
+                    <span>TRACK A: GENERAL</span>
+                    <span>DURATION: 4 HOURS</span>
+                </div>
+                <h3 style="font-size:1.25rem; margin-bottom:12px;">Scam Mechanics &amp; Individual Defense</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Deconstructs the psychological hooks used in online investment setups, social media capture loops, and emergency billing scams.</p>
+                <ul class="program-outcomes">
+                    <li>Identify advanced impersonation vectors</li>
+                    <li>Secure localized authentication channels</li>
+                    <li>Verify payment escrow validity</li>
+                </ul>
+                <a href="contact.html?intent=training" class="btn btn-outline">Enlist In Individual Session</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-meta">
+                    <span>TRACK B: CORPORATE</span>
+                    <span>DURATION: 1.5 DAYS</span>
+                </div>
+                <h3 style="font-size:1.25rem; margin-bottom:12px;">Enterprise Workforce Shield Protocol</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Rigorous employee situational exercises targeting spear phishing, business email compromises, and spoofed internal transactions.</p>
+                <ul class="program-outcomes">
+                    <li>Isolate social engineering links instantly</li>
+                    <li>Implement rigorous internal verify-loops</li>
+                    <li>Minimize perimeter payload drops</li>
+                </ul>
+                <a href="contact.html?intent=training" class="btn btn-outline" style="border-color:var(--accent-blue); color:var(--accent-blue);">Request Institutional Booking</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding enterprise-wrapper">
+        <div class="container enterprise-grid">
+            <div>
+                <span class="badge badge-blue">Enterprise Space</span>
+                <h2 class="section-title" style="text-align:left; margin-bottom:24px;">Rigorous Risk Infrastructure Audits</h2>
+                <p style="color:var(--text-secondary); margin-bottom:20px;">We analyze technical architectures and administrative processes to locate structural points vulnerable to manipulation or human error.</p>
+                <ul class="spec-list">
+                    <li class="spec-item"><div class="spec-indicator"></div><span>Social Engineering Resilience Mapping (SERM)</span></li>
+                    <li class="spec-item"><div class="spec-indicator"></div><span>Internal Financial Authentication Flow Isolation</span></li>
+                    <li class="spec-item"><div class="spec-indicator"></div><span>Data Leaks Tracking &amp; Public Access Reductions</span></li>
+                </ul>
+            </div>
+            <div style="background:var(--bg-secondary); border:1px solid var(--border-color); padding:48px; border-radius:var(--radius-lg);">
+                <h3 style="margin-bottom:16px; font-size:1.35rem;">Initiate Strategic Audit Mapping</h3>
+                <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:32px;">Every audit path is custom-engineered to match your regional regulatory compliance bounds, providing clear, functional risk data logs.</p>
+                <a href="contact.html?intent=partner" class="btn btn-primary">Connect With Advisory Core</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-green">Operational Principles</span>
+            <h2 class="section-title">The Prevention-First Philosophy</h2>
+            <p class="section-subtitle">Why leading institutions integrate our human defense architectures into their primary safety layers.</p>
+        </div>
+
+        <div class="trust-grid">
+            <div class="trust-card">
+                <h4 style="margin-bottom:10px; font-size:1.15rem;">Telemetry-Driven Insights</h4>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Our strategies are built on real-world tracking metrics, protecting teams from the specific regional threats they actively face.</p>
+            </div>
+            <div class="trust-card">
+                <h4 style="margin-bottom:10px; font-size:1.15rem;">Non-Alarmist Frameworks</h4>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">We focus on clear, logical containment methods, removing anxiety from security protocols to ensure clean execution during crisis loops.</p>
+            </div>
+            <div class="trust-card">
+                <h4 style="margin-bottom:10px; font-size:1.15rem;">Zero Vendor Dependencies</h4>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">We deliver pure, unbiased awareness frameworks and technical guidance completely free from software upsells or vendor lock-in.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background:var(--bg-secondary); border-top:1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Engagement Route</span>
+                <h2 class="section-title">Onboarding Mechanics</h2>
+                <p class="section-subtitle">Four clear operational steps to configure, deploy, and evaluate your tailored cybersecurity support infrastructure.</p>
+            </div>
+
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="process-num">01</div>
+                    <h4 style="margin-top:16px; margin-bottom:8px;">Scope Query</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Submit your institutional footprint details securely via our targeted contact interface.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">02</div>
+                    <h4 style="margin-top:16px; margin-bottom:8px;">Vector Analysis</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Our security panel reviews operational exposure profiles to isolate clear systemic goals.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">03</div>
+                    <h4 style="margin-top:16px; margin-bottom:8px;">Deploy Systems</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Workshops are run, data pipelines connected, and defensive actions deployed across team seats.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">04</div>
+                    <h4 style="margin-top:16px; margin-bottom:8px;">Verify Health</h4>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">We provide follow-up threat evaluations to confirm your team's ongoing risk reduction status.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-blue">Validation Core</span>
+            <h2 class="section-title">Operational Case Outcomes</h2>
+            <p class="section-subtitle">How localized organizational systems successfully protect asset vectors using our training models.</p>
+        </div>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p style="font-style:italic; color:var(--text-secondary); font-size:0.95rem;">&ldquo;By implementing their strict confirmation loops across our branches, we fully blocked incoming transaction manipulation traps that standard firewalls couldn't touch.&rdquo;</p>
+                <div class="client-profile">
+                    <div class="client-avatar">FM</div>
+                    <div>
+                        <h5 style="color:var(--text-primary);">Risk Assessment Lead</h5>
+                        <p style="font-size:0.8rem; color:var(--text-muted);">Regional Agriculture SACCO Hub</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p style="font-style:italic; color:var(--text-secondary); font-size:0.95rem;">&ldquo;Their practical approach to credential protection transformed our digital operations. Our field staff can now identify social engineering attempts instantly.&rdquo;</p>
+                <div class="client-profile">
+                    <div class="client-avatar">ON</div>
+                    <div>
+                        <h5 style="color:var(--text-primary);">Director of Strategy</h5>
+                        <p style="font-size:0.8rem; color:var(--text-muted);">Community Development NGO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-padding pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-green">Resource Commitments</span>
+                <h2 class="section-title">Sustainable Infrastructure Packaging</h2>
+                <p class="section-subtitle">Transparent, value-driven resource models built to support long-term ecosystem health and open safety access.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div>
+                        <h4 style="font-size:1.25rem;">Standard Awareness</h4>
+                        <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:4px;">For small business footprints and local groups.</p>
+                        <div class="price-tag">KES 45,000 <span>/ Session</span></div>
+                        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:8px;">Includes:</p>
+                        <ul style="list-style:none; font-size:0.9rem; color:var(--text-secondary);">
+                            <li style="margin-bottom:6px;">• 4-Hour Intensive On-Site Class</li>
+                            <li style="margin-bottom:6px;">• Regional Scam Playbook Logs</li>
+                            <li style="margin-bottom:6px;">• Personal Hardware Review Guidelines</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html?intent=training" class="btn btn-outline" style="margin-top:32px;">Deploy Package</a>
+                </div>
+
+                <div class="price-card featured">
+                    <div>
+                        <span class="badge badge-cyan" style="position:absolute; top:-14px; right:24px;">Recommended</span>
+                        <h4 style="font-size:1.25rem;">Corporate Defense Core</h4>
+                        <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:4px;">Tailored protection scaling for growing firms.</p>
+                        <div class="price-tag">KES 120,000 <span>/ Plan</span></div>
+                        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:8px;">Includes:</p>
+                        <ul style="list-style:none; font-size:0.9rem; color:var(--text-secondary);">
+                            <li style="margin-bottom:6px;">• Full 1.5-Day Multi-Department Program</li>
+                            <li style="margin-bottom:6px;">• Phishing Simulation Assessments</li>
+                            <li style="margin-bottom:6px;">• Custom Verification Process Models</li>
+                            <li style="margin-bottom:6px;">• 30-Day Post-Training Safety Check</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html?intent=training" class="btn btn-primary" style="margin-top:32px; width:100%;">Deploy Corporate Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-cyan">Inquiry Matrix</span>
+            <h2 class="section-title">Services Framework FAQ</h2>
+            <p class="section-subtitle">Technical details covering onboarding timelines, delivery methods, and infrastructure integration support.</p>
+        </div>
+
+        <div class="faq-wrapper">
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    Are training sessions available remotely or on-site only?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>We provide hybrid setups. Our operational training centers run interactive video loops for remote teams, alongside in-person workshops designed for leadership groups and high-risk account teams.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    How do you tailor program playbooks for localized threats like mobile banking fraud?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>We analyze live threat data from public reporting pools to build real-world scenario tests that mimic actual tactics, making sure your team learns to handle realistic local risks.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    Can our internal IT department sync directly with your system telemetry?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>Yes. Institutional partners can connect directly with our data feeds, giving your technical teams instant visibility into local threat metrics and evolving fraud tactics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding cta-strip">
+        <div class="container">
+            <h2 style="font-size:2.25rem; font-weight:700; margin-bottom:16px;">Systemic Resilience is an Institutional Asset</h2>
+            <p style="color:var(--text-secondary); max-width:640px; margin:0 auto 32px auto; font-size:1.1rem;">Coordinate with our technical panel today to establish baseline metrics for your team or organization.</p>
+            <a href="contact.html" class="btn btn-primary">Initiate Capability Scoping</a>
+        </div>
+    </section>
+
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo-area" style="margin-bottom: 20px;">
+                        <svg class="logo-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+                    </a>
+                    <p style="font-size:0.9rem; line-height:1.65; color:var(--text-secondary);">De-escalating cyber panic loops and building real-world digital resilience through structured, step-by-step containment plans and open-source verification software models.</p>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Defensive Hubs</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#emergency">Emergency Mitigation Gateway</a></li>
+                        <li><a href="library.html">Threat Database Repository</a></li>
+                        <li><a href="tools.html">Cryptographic Query Systems</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Platform Roots</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Strategy &amp; Vision</a></li>
+                        <li><a href="services.html">Bespoke Enterprise Support</a></li>
+                        <li><a href="legal/privacy.html">Data Retention Protocols</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Compliance Sync</h5>
+                    <ul class="footer-links">
+                        <li><a href="legal/terms.html">Usage Boundary Conditions</a></li>
+                        <li><a href="legal/liability.html">Liability Disclaimers</a></li>
+                        <li><a href="partners/government.html">State Security Operations</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Citizen Safety Ecosystem. All global sovereign rights reserved. Built to KeCIRT / NIST cyber-hygiene baselines.</p>
+                <a href="#" style="color: var(--text-muted); text-decoration:none;">Apex Interface Anchor &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Adaptive Visual Theme Switcher
+            const themeToggle = document.getElementById('themeToggle');
+            const nativeTheme = localStorage.getItem('theme-token') || 'dark';
+            document.documentElement.setAttribute('data-theme', nativeTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const operationalTheme = document.documentElement.getAttribute('data-theme');
+                const targetTheme = operationalTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', targetTheme);
+                localStorage.setItem('theme-token', targetTheme);
+            });
+
+            // Smooth Accordion Module Core
+            const triggers = document.querySelectorAll('.faq-trigger');
+            triggers.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const block = btn.parentElement;
+                    const isAlreadyActive = block.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(x => x.classList.remove('active'));
+                    document.querySelectorAll('.faq-trigger').forEach(x => x.setAttribute('aria-expanded', 'false'));
+                    
+                    if (!isAlreadyActive) {
+                        block.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Global Key Intercept for Search Component Mockup
+            document.addEventListener('keydown', (e) => {
+                if (e.key === '/') {
+                    e.preventDefault();
+                    alert("System Search Node Context: Local indexing system is initializing secure memory keys.");
+                }
+            });
+
+            // Mobile Navigation Toggle Controller
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                const menuOpen = navLinks.style.display === 'flex';
+                if (menuOpen) {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '88px';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.backgroundColor = 'var(--bg-secondary)';
+                    navLinks.style.padding = '32px';
+                    navLinks.style.borderBottom = '1px solid var(--border-color)';
+                }
+            });
+        });
+
+        // Audience Segment Switcher
+        function switchAudience(event, targetId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.audience-content-box').forEach(box => box.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(targetId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
