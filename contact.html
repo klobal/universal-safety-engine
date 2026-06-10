@@ -1,1 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Contact & Support Portal | Citizen Safety & Cyber Awareness System</title>
+    
+    <meta name="description" content="Access our secure communication portal to report incidents, request organizational cybersecurity training, or establish institutional partnerships. Safe, encrypted, non-alarmist crisis support.">
+    <meta name="keywords" content="report online scam, cyber support portal, organizational cybersecurity training, M-Pesa fraud reporting, secure communication channel">
+    <meta name="author" content="Citizen Safety Ecosystem">
+    <meta name="robots" content="index, follow">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://safety.citizen.go.ke/contact.html">
+    <meta property="og:title" content="Secure Support & Intake Hub | Citizen Safety & Cyber Awareness System">
+    <meta property="og:description" content="File incident reports securely, explore institutional mitigation strategies, or coordinate enterprise awareness workshops.">
+    <meta property="og:image" content="assets/og-contact-image.jpg">
+
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230f172a'/><path d='M50 25 L70 40 L70 65 L50 80 L30 65 L30 40 Z' fill='none' stroke='%2306b6d4' stroke-width='5'/></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- SYSTEM DESIGN TOKENS --- */
+        :root {
+            /* Color Foundations - Deep Shield Palette */
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-tertiary: #1f2937;
+            --bg-glass: rgba(17, 24, 39, 0.8);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            
+            /* Accent Core Matrix */
+            --accent-cyan: #06b6d4;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.12);
+            --accent-blue: #3b82f6;
+            --accent-blue-glow: rgba(59, 130, 246, 0.12);
+            --accent-green: #10b981;
+            --accent-green-glow: rgba(16, 185, 129, 0.12);
+            --accent-error: #ef4444;
+            --accent-error-glow: rgba(239, 68, 68, 0.15);
+
+            /* Structural System Grid */
+            --max-width: 1280px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition-premium: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+            --shadow-cyan-glow: 0 0 30px rgba(6, 182, 212, 0.15);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.06);
+            --accent-blue-glow: rgba(59, 130, 246, 0.06);
+            --accent-green-glow: rgba(16, 185, 129, 0.06);
+            --shadow-premium: 0 20px 40px -15px rgba(15, 23, 42, 0.06);
+        }
+
+        /* --- GLOBAL BASICS & RESET MATRIX --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.625;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 120px 0; }
+        .section-header { text-align: center; max-width: 760px; margin: 0 auto 64px auto; }
+        .section-title {
+            font-size: 2.5rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 40%, var(--text-secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle { color: var(--text-secondary); font-size: 1.125rem; }
+
+        /* Component Tokens */
+        .badge {
+            display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 100px;
+            font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+            border: 1px solid currentColor; margin-bottom: 20px;
+        }
+        .badge-cyan { color: var(--accent-cyan); background: var(--accent-cyan-glow); }
+        .badge-blue { color: var(--accent-blue); background: var(--accent-blue-glow); }
+        .badge-green { color: var(--accent-green); background: var(--accent-green-glow); }
+        .badge-error { color: var(--accent-error); background: var(--accent-error-glow); }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px;
+            font-size: 0.95rem; font-weight: 600; border-radius: var(--radius-sm); cursor: pointer;
+            transition: var(--transition-premium); text-decoration: none; border: none; gap: 10px;
+        }
+        .btn-primary { background-color: var(--accent-cyan); color: #0b0f19; box-shadow: var(--shadow-cyan-glow); }
+        .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn-secondary { background-color: transparent; color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background-color: var(--bg-tertiary); border-color: var(--text-secondary); }
+        .btn-danger { background-color: var(--accent-error); color: #ffffff; }
+        .btn-danger:hover { transform: translateY(-2px); filter: brightness(1.1); }
+
+        /* --- 1. PREMIUM STICKY NAVIGATION BAR --- */
+        .nav-wrapper {
+            position: sticky; top: 0; z-index: 1000; background: var(--bg-glass);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color); transition: var(--transition-premium);
+        }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+        .logo-icon { width: 36px; height: 36px; stroke: var(--accent-cyan); fill: none; }
+        .logo-text { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+        .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+        .nav-link { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: var(--transition-premium); }
+        .nav-link:hover, .nav-link.active { color: var(--accent-cyan); }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        
+        .theme-toggle {
+            background: none; border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+            width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            color: var(--text-secondary); transition: var(--transition-premium);
+        }
+        .theme-toggle:hover { color: var(--accent-cyan); background: var(--bg-tertiary); }
+        .theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; }
+        .menu-toggle { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; }
+
+        /* --- 2. HERO SECTION --- */
+        .hero-section {
+            padding: 160px 0 100px 0;
+            background: radial-gradient(circle at 50% 20%, var(--accent-cyan-glow) 0%, transparent 55%);
+            text-align: center;
+        }
+        .hero-headline { font-size: 3.75rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 24px; }
+        .hero-headline span { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-supporting-text { font-size: 1.25rem; color: var(--text-secondary); max-width: 740px; margin: 0 auto 44px auto; }
+        .hero-ctas { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+        /* --- 3. PURPOSE INTENT SELECTOR --- */
+        .purpose-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px; margin-bottom: 80px; }
+        .purpose-card {
+            background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+            padding: 32px; cursor: pointer; transition: var(--transition-premium); text-align: left; position: relative;
+        }
+        .purpose-card:hover { border-color: var(--accent-cyan); transform: translateY(-2px); box-shadow: var(--shadow-premium); }
+        .purpose-card.active { border-color: var(--accent-cyan); background: var(--bg-tertiary); box-shadow: var(--shadow-cyan-glow); }
+        .purpose-card.active::after {
+            content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+            width: 40px; height: 3px; background: var(--accent-cyan); border-radius: 3px 3px 0 0;
+        }
+        .purpose-icon { width: 44px; height: 44px; stroke: var(--accent-cyan); fill: none; margin-bottom: 20px; }
+
+        /* --- 4. SMART MULTI-USE FORM CONTROLLERS --- */
+        .form-section-wrapper { background: var(--bg-secondary); border-y: 1px solid var(--border-color); padding: 96px 0; }
+        .form-container-box { max-width: 780px; margin: 0 auto; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 56px; }
+        .functional-form-panel { display: none; }
+        .functional-form-panel.active { display: block; animation: fadeIn 0.4s ease-out; }
+        
+        .form-group-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+        .form-group { margin-bottom: 24px; }
+        .form-label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+        .form-input, .form-textarea, .form-select {
+            width: 100%; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+            padding: 14px 18px; color: var(--text-primary); font-family: var(--font-sans); font-size: 0.95rem; transition: var(--transition-premium);
+        }
+        .form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--accent-cyan); box-shadow: 0 0 0 3px var(--accent-cyan-glow); }
+        .form-textarea { height: 140px; resize: vertical; }
+        
+        .upload-drag-area {
+            border: 2px dashed var(--border-color); padding: 36px; text-align: center; border-radius: var(--radius-md);
+            cursor: pointer; transition: var(--transition-premium); background: var(--bg-secondary);
+        }
+        .upload-drag-area:hover { border-color: var(--accent-cyan); background: var(--bg-tertiary); }
+
+        /* --- 5. EMERGENCY CRISIS STATUS COMPONENT --- */
+        .crisis-banner { background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); border: 1px solid var(--accent-error); border-radius: var(--radius-lg); padding: 48px; margin-bottom: 80px; }
+        .crisis-layout { display: flex; gap: 40px; align-items: center; }
+        .crisis-steps { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 24px; width: 100%; }
+        .crisis-step-item { background: rgba(0,0,0,0.2); border-left: 3px solid var(--accent-error); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+
+        /* --- 6. COMM-CHANNELS GRID --- */
+        .channels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+        .channel-card { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 36px; transition: var(--transition-premium); }
+        .channel-card:hover { border-color: var(--accent-blue); }
+
+        /* --- 7. INSTITUTIONAL VERTICAL OVERVIEW --- */
+        .enterprise-segment { background: var(--bg-secondary); border-top: 1px solid var(--border-color); }
+        .enterprise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+
+        /* --- 8. TRUST MATRIX POLICY BACKGROUND --- */
+        .trust-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+        .matrix-item { border-left: 2px solid var(--accent-green); padding-left: 24px; }
+
+        /* --- 9. FAQ ACCORDION PIPELINE --- */
+        .faq-section { background: var(--bg-secondary); }
+        .faq-wrapper { max-width: 840px; margin: 0 auto; }
+        .faq-item { background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-bottom: 16px; overflow: hidden; }
+        .faq-trigger { width: 100%; padding: 24px; background: none; border: none; text-align: left; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-icon { width: 20px; height: 20px; stroke: var(--text-secondary); fill: none; transition: var(--transition-premium); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1); padding: 0 24px; color: var(--text-secondary); }
+        .faq-item.active .faq-content { max-height: 400px; padding-bottom: 24px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); stroke: var(--accent-cyan); }
+
+        /* --- 10. CALL TO ACTION INTERFACE --- */
+        .cta-strip { background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 100%); border-top: 1px solid var(--border-color); text-align: center; }
+
+        /* --- 11. PREMIUM ARCHITECTURE FOOTER --- */
+        .footer-wrapper { background-color: #080b11; border-top: 1px solid var(--border-color); padding: 96px 0 48px 0; color: var(--text-secondary); }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 48px; margin-bottom: 64px; }
+        .footer-heading { color: var(--text-primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 24px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: var(--transition-premium); }
+        .footer-links a:hover { color: var(--accent-cyan); }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 0.85rem; }
+
+        /* --- KEYFRAME ANIMATION LIBRARY --- */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- RESPONSIVE MEDIA SPECIFICATION MATRIX --- */
+        @media (max-width: 1024px) {
+            .enterprise-grid, .form-group-row { grid-template-columns: 1fr; }
+            .crisis-layout { flex-direction: column; text-align: center; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+            .hero-headline { font-size: 2.5rem; }
+            .form-container-box { padding: 32px 20px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-wrapper">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area" aria-label="Home Interface Link">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+            </a>
+            
+            <nav role="navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="library.html" class="nav-link">Threat Library</a></li>
+                    <li><a href="index.html#emergency" class="nav-link">Quick Help</a></li>
+                    <li><a href="prevention.html" class="nav-link">Prevention</a></li>
+                    <li><a href="training.html" class="nav-link">Training</a></li>
+                    <li><a href="tools.html" class="nav-link">Tools</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch interface style context">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <a href="#emergency-guide" class="btn btn-danger" style="padding: 10px 20px; font-size: 0.85rem;">Emergency Hub</a>
+                <button class="menu-toggle" aria-label="Trigger Responsive Nav Layer">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <span class="badge badge-cyan">Secure Gateway</span>
+            <h1 class="hero-headline">Get Help. Ask Questions. <span>Stay Protected.</span></h1>
+            <p class="hero-supporting-text">You are not alone. Our platform transforms crisis confusion into structured mitigation. Choose an operational path below to contact our verified specialists.</p>
+            <div class="hero-ctas">
+                <a href="#purposes" class="btn btn-primary">Select Contact Intent</a>
+                <a href="#channels" class="btn btn-secondary">Direct Channels</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="purposes" class="container" style="padding-bottom: 60px;">
+        <div class="section-header">
+            <span class="badge badge-blue">Routing Engine</span>
+            <h2 class="section-title">Specify Your Intake Context</h2>
+            <p class="section-subtitle">Selecting an explicit intent dynamically configures our zero-retention submission fields to match your security requirements.</p>
+        </div>
+
+        <div class="purpose-grid">
+            <div class="purpose-card active" data-target="form-general">
+                <svg class="purpose-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                <h3 style="font-size:1.2rem; margin-bottom:8px;">General Support</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Seek structural cybersecurity configuration guidance or open platform assistance tools.</p>
+            </div>
+
+            <div class="purpose-card" data-target="form-incident">
+                <svg class="purpose-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                <h3 style="font-size:1.2rem; margin-bottom:8px;">Report Fraud / Scam</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Isolate and document payment, identity system breach vectors, or mobile money extortion.</p>
+            </div>
+
+            <div class="purpose-card" data-target="form-training">
+                <svg class="purpose-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                <h3 style="font-size:1.2rem; margin-bottom:8px;">Organizational Training</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Coordinate systemic anti-phishing defense workshops for businesses or educational bodies.</p>
+            </div>
+
+            <div class="purpose-card" data-target="form-partner">
+                <svg class="purpose-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5l1.222-1.222m4.571-4.571a4 4 0 005.656-5l-1.222 1.222" /></svg>
+                <h3 style="font-size:1.2rem; margin-bottom:8px;">Institutional Partnership</h3>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Integrate telemetry data frameworks with state networks, regional NGOs, or law enforcement.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="form-section-wrapper">
+        <div class="container">
+            <div class="form-container-box">
+                
+                <form id="form-general" class="functional-form-panel active" onsubmit="return handleFormSubmit(event)">
+                    <h3 style="font-size:1.5rem; margin-bottom:32px; border-left:3px solid var(--accent-cyan); padding-left:16px;">General Configuration & Support</h3>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label class="form-label">Your Name / Identifier</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Secure Return Email</label>
+                            <input type="email" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Vulnerability Category</label>
+                        <select class="form-select">
+                            <option>Account Authentication Hardening</option>
+                            <option>Device Encryption Query</option>
+                            <option>Platform Material Feedback</option>
+                            <option>Other Operational Request</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Describe Your Technical Inquiry</label>
+                        <textarea class="form-textarea" required placeholder="Provide clear non-sensitive parameters..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Transmit Secure Request</button>
+                </form>
+
+                <form id="form-incident" class="functional-form-panel" onsubmit="return handleFormSubmit(event)">
+                    <h3 style="font-size:1.5rem; margin-bottom:32px; border-left:3px solid var(--accent-error); padding-left:16px;">Secure Fraud Incident Telemetry Intake</h3>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label class="form-label">Exploit Classification</label>
+                            <select class="form-select">
+                                <option>Carrier Payment Reversal Scam (M-Pesa etc.)</option>
+                                <option>Social Media Account Subversion</option>
+                                <option>Identity Impersonation Ring</option>
+                                <option>Synthetic Investment Network / Pyramid Scheme</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Approximate Financial Vector (Optional)</label>
+                            <input type="text" class="form-input" placeholder="e.g., KES 15,000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Chronological Event Path</label>
+                        <textarea class="form-textarea" required placeholder="Explain how the interaction was initiated, what links were processed, and what communications occurred. Do not upload raw passwords."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Evidence Capture Vault (Screenshots / Logs)</label>
+                        <div class="upload-drag-area">
+                            <svg style="width:32px; height:32px; stroke:var(--text-muted); fill:none; margin-bottom:8px;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
+                            <p style="font-size:0.9rem; color:var(--text-secondary);">Drop triage logs, system readouts, or capture artifacts here</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger" type="submit">Ingest Telemetry Report</button>
+                </form>
+
+                <form id="form-training" class="functional-form-panel" onsubmit="return handleFormSubmit(event)">
+                    <h3 style="font-size:1.5rem; margin-bottom:32px; border-left:3px solid var(--accent-blue); padding-left:16px;">Enterprise Capability Training Coordination</h3>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label class="form-label">Institution Entity Name</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Corporate Classification</label>
+                            <select class="form-select">
+                                <option>Private Financial Entity / SACCO</option>
+                                <option>Registered Academic Infrastructure</option>
+                                <option>Non-Governmental Organization (NGO)</option>
+                                <option>State Regulatory Entity Unit</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label class="form-label">Operational Seat Capacity Count</label>
+                            <input type="number" class="form-input" placeholder="e.g., 45">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Primary Training Blueprint Focus</label>
+                            <select class="form-select">
+                                <option>Human Layer Anti-Phishing Mechanics</option>
+                                <option>Executive Spear-Exploitation Protections</option>
+                                <option>Administrative Transaction Integrity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="background-color:var(--accent-blue);" type="submit">Submit Enterprise Request</button>
+                </form>
+
+                <form id="form-partner" class="functional-form-panel" onsubmit="return handleFormSubmit(event)">
+                    <h3 style="font-size:1.5rem; margin-bottom:32px; border-left:3px solid var(--accent-green); padding-left:16px;">Strategic Ecosystem Integration</h3>
+                    <div class="form-group">
+                        <label class="form-label">Sovereign / Organizational Authority Details</label>
+                        <input type="text" class="form-input" required placeholder="Official department registration references...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Proposed Telemetry Sharing Protocol Blueprint</label>
+                        <textarea class="form-textarea" required placeholder="Outline expected database interoperability or localized community framework goals..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" style="background-color:var(--accent-green);" type="submit">Request Integration Evaluation</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="emergency-guide" class="section-padding" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="crisis-banner">
+                <div class="crisis-layout">
+                    <div style="flex:1;">
+                        <span class="badge badge-error">Active Exploit Notice</span>
+                        <h2 style="font-size:2rem; font-weight:700; margin-bottom:12px;">Experiencing an Ongoing Digital Threat Loop?</h2>
+                        <p style="color:var(--text-secondary);">If you have accidentally interacted with an unverified link, are seeing ongoing unauthorized transactions, or are facing active blackmail, execute the following containment protocol immediately:</p>
+                    </div>
+                </div>
+                
+                <ul class="crisis-steps">
+                    <li class="crisis-step-item">
+                        <strong style="display:block; margin-bottom:4px; color:var(--accent-error);">1. Freeze Capital</strong>
+                        <p style="font-size:0.85rem; color:var(--text-secondary); margin:0;">Instantly run your provider's offline locking codes to block outward money paths.</p>
+                    </li>
+                    <li class="crisis-step-item">
+                        <strong style="display:block; margin-bottom:4px; color:var(--accent-error);">2. Isolate Device</strong>
+                        <p style="font-size:0.85rem; color:var(--text-secondary); margin:0;">Disconnect your local networks (Wi-Fi/Cellular data) to disrupt active remote access loops.</p>
+                    </li>
+                    <li class="crisis-step-item">
+                        <strong style="display:block; margin-bottom:4px; color:var(--accent-error);">3. Log Evidence</strong>
+                        <p style="font-size:0.85rem; color:var(--text-secondary); margin:0;">Take screenshots of payment slips, phone numbers, and conversation logs before they are deleted.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="channels" class="section-padding" style="background: var(--bg-secondary); border-top:1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Direct Links</span>
+                <h2 class="section-title">Verified Communications Paths</h2>
+                <p class="section-subtitle">Direct, cryptographic communication corridors for standard inquiries and rapid support delivery.</p>
+            </div>
+
+            <div class="channels-grid">
+                <div class="channel-card">
+                    <h4 style="margin-bottom:8px;">Standard Operation Desk</h4>
+                    <p style="font-family:var(--font-mono); color:var(--accent-cyan); margin-bottom:16px;">ops@citizen-safety.or.ke</p>
+                    <small style="color:var(--text-muted);">Mean response tracking index: under 12 hours.</small>
+                </div>
+                <div class="channel-card">
+                    <h4 style="margin-bottom:8px;">Secure Support Core</h4>
+                    <p style="font-family:var(--font-mono); color:var(--accent-blue); margin-bottom:16px;">+254 (0) 20 790 000</p>
+                    <small style="color:var(--text-muted);">Available Monday to Friday, 08:00 - 17:00 EAT.</small>
+                </div>
+                <div class="channel-card">
+                    <h4 style="margin-bottom:8px;">Encrypted Crisis Messaging</h4>
+                    <p style="font-family:var(--font-mono); color:var(--accent-green); margin-bottom:16px;">wa.me/citizensafetysecure</p>
+                    <small style="color:var(--text-muted);">End-to-end verified automated triage system.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container enterprise-grid">
+            <div>
+                <span class="badge badge-blue">Institutional Frameworks</span>
+                <h2 class="section-title" style="text-align:left; margin-bottom:24px;">Harden Your Institutional Infrastructure Against Threats</h2>
+                <p style="color:var(--text-secondary); margin-bottom:20px;">Human operational vulnerability represents the largest accessible entry path for systemic network breaches. Our platform delivers enterprise-grade educational defense modules without traditional vendor bloat.</p>
+                <p style="color:var(--text-secondary);">We help localized corporate entities, credit unions, and school systems adapt quickly to regional scam patterns.</p>
+            </div>
+            <div style="background:var(--bg-secondary); border:1px solid var(--border-color); padding:40px; border-radius:var(--radius-lg);">
+                <h4 style="margin-bottom:16px;">Request Custom Simulation Program</h4>
+                <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:24px;">Deploy safe, internal spear phishing testing and transaction audit frameworks customized for your operational reality.</p>
+                <button class="btn btn-primary" onclick="activateForm('form-training')">Initialize Training Scoping Tracker</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background:var(--bg-secondary); border-top:1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-green">Privacy Policies</span>
+                <h2 class="section-title">Submission Protection Framework</h2>
+                <p class="section-subtitle">How we protect your telemetry data and operational profiles across all intake forms.</p>
+            </div>
+
+            <div class="trust-matrix">
+                <div class="matrix-item">
+                    <h4 style="margin-bottom:8px;">Zero-Trace Retention Strategy</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Validated telemetry logs are generalized for regional trend monitoring and fully cleared from active web cache servers within 7 days.</p>
+                </div>
+                <div class="matrix-item">
+                    <h4 style="margin-bottom:8px;">Isolated Signal Handling</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Information sent to our platforms is routed through isolated tracking tunnels, preventing cross-contamination from third-party lookup tools.</p>
+                </div>
+                <div class="matrix-item">
+                    <h4 style="margin-bottom:8px;">Action-Oriented Response</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">We don't use fear-based metrics. Our triage tracks provide practical containment strategies designed to limit active damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Information Repository</span>
+                <h2 class="section-title">Support Communications FAQ</h2>
+                <p class="section-subtitle">Clear answers covering response times, data handling safety, and system access guidelines.</p>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        What is the average response time for submitted data updates?
+                        <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>General inquiries are processed within 12-24 business hours. Submissions tagged as active exploitation are immediately funneled through automated containment paths to provide instant step-by-step guidance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        Are my uploaded file captures or financial details safe?
+                        <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes. All uploads are fed into local validation arrays. We strip media tracking data and structural metadata to make sure your identity remains completely secure throughout analysis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        Does your support team coordinate directly with regional financial providers?
+                        <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>We supply verified incident summaries that can be handed directly to fraud desks, credit unions, and law enforcement teams to dramatically speed up account restoration paths.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding cta-strip">
+        <div class="container">
+            <h2 style="font-size:2.25rem; font-weight:700; margin-bottom:16px;">Build Active Digital Resilience Today</h2>
+            <p style="color:var(--text-secondary); max-width:640px; margin:0 auto 32px auto; font-size:1.1rem;">Whether securing a personal account or protection-testing an organization, our structural platform paths are built to serve you.</p>
+            <a href="tools.html" class="btn btn-primary">Launch Open Diagnostics Tool</a>
+        </div>
+    </section>
+
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo-area" style="margin-bottom: 20px;">
+                        <svg class="logo-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+                    </a>
+                    <p style="font-size:0.9rem; line-height:1.65; color:var(--text-secondary);">De-escalating cyber panic loops and building real-world digital resilience through structured, step-by-step containment plans and open-source verification software models.</p>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Defensive Hubs</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#emergency">Emergency Mitigation Gateway</a></li>
+                        <li><a href="library.html">Threat Database Repository</a></li>
+                        <li><a href="tools.html">Cryptographic Query Systems</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Platform Roots</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Strategy & Vision</a></li>
+                        <li><a href="services.html">Bespoke Enterprise Support</a></li>
+                        <li><a href="legal/privacy.html">Data Retention Protocols</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Compliance Sync</h5>
+                    <ul class="footer-links">
+                        <li><a href="legal/terms.html">Usage Boundary Conditions</a></li>
+                        <li><a href="legal/liability.html">Liability Disclaimers</a></li>
+                        <li><a href="partners/government.html">State Security Operations</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Citizen Safety Ecosystem. All global sovereign rights reserved. Built to KeCIRT / NIST cyber-hygiene baselines.</p>
+                <a href="#home" style="color: var(--text-muted); text-decoration:none;">Apex Interface Anchor &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Adaptive Visual Theme Switcher
+            const themeToggle = document.getElementById('themeToggle');
+            const nativeTheme = localStorage.getItem('theme-token') || 'dark';
+            document.documentElement.setAttribute('data-theme', nativeTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const operationalTheme = document.documentElement.getAttribute('data-theme');
+                const targetTheme = operationalTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', targetTheme);
+                localStorage.setItem('theme-token', targetTheme);
+            });
+
+            // Smooth Accordion Module Core
+            const triggers = document.querySelectorAll('.faq-trigger');
+            triggers.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const block = btn.parentElement;
+                    const isAlreadyActive = block.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(x => x.classList.remove('active'));
+                    document.querySelectorAll('.faq-trigger').forEach(x => x.setAttribute('aria-expanded', 'false'));
+                    
+                    if (!isAlreadyActive) {
+                        block.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Purpose Card Route & Interaction Switcher
+            const purposeCards = document.querySelectorAll('.purpose-card');
+            purposeCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    purposeCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    
+                    const targetedFormId = card.getAttribute('data-target');
+                    activateForm(targetedFormId);
+                });
+            });
+
+            // Mobile Navigation Toggle Controller
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                const menuOpen = navLinks.style.display === 'flex';
+                if (menuOpen) {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '88px';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.backgroundColor = 'var(--bg-secondary)';
+                    navLinks.style.padding = '32px';
+                    navLinks.style.borderBottom = '1px solid var(--border-color)';
+                }
+            });
+        });
+
+        // Form View Visibility State Switcher
+        function activateForm(formId) {
+            document.querySelectorAll('.functional-form-panel').forEach(form => {
+                form.classList.remove('active');
+            });
+            const targetedForm = document.getElementById(formId);
+            if (targetedForm) {
+                targetedForm.classList.add('active');
+                // Scroll gracefully into focus
+                targetedForm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Safe Submission Intercept Mockup
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert("Security Handshake Successful: Data ingestion complete. Telemetry safely routed to system analysis desks under encryption shielding.");
+            event.target.reset();
+            return false;
+        }
+    </script>
+</body>
+</html>
