@@ -1,1 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Safety & Cyber Awareness System | Secure, Guided Digital Protection</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A premium, emotionally stabilizing cybersecurity trust platform designed to help citizens identify scams, mitigate active cyber threats, and navigate digital fraud through step-by-step guidance.">
+    <meta name="keywords" content="cybersecurity awareness, citizen safety, M-Pesa scams, phishing protection, online fraud prevention, digital privacy, scam analyzer">
+    <meta name="author" content="Citizen Safety Ecosystem">
+    <meta name="robots" content="index, follow">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://safety.citizen.go.ke/">
+    <meta property="og:title" content="Citizen Safety & Cyber Awareness System">
+    <meta property="og:description" content="Stay Calm. Understand. Act Correctly. Real-time guidance and defensive architecture for modern cyber threats and financial scams.">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Citizen Safety & Cyber Awareness System">
+    <meta property="twitter:description" content="A stabilizing, secure operation center designed to protect individuals and institutions against digital exploitation.">
+
+    <!-- Favicon Placeholder -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230f172a'/><path d='M50 25 L70 40 L70 65 L50 80 L30 65 L30 40 Z' fill='none' stroke='%2306b6d4' stroke-width='5'/></svg>">
+
+    <!-- Google Fonts Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS ARCHITECTURE & SYSTEM TOKENS --- */
+        :root {
+            /* Color Tokens - Dark Mode Default (Calm Cyber Intelligence) */
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-tertiary: #1f2937;
+            --bg-glass: rgba(17, 24, 39, 0.75);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            
+            /* Accent Tokens */
+            --accent-cyan: #06b6d4;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.15);
+            --accent-blue: #3b82f6;
+            --accent-blue-glow: rgba(59, 130, 246, 0.15);
+            --accent-success: #10b981;
+            --accent-success-glow: rgba(16, 185, 129, 0.15);
+            --accent-warning: #f59e0b;
+            --accent-error: #ef4444;
+
+            /* Structural Tokens */
+            --max-width: 1280px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --shadow-premium: 0 12px 40px -12px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 25px rgba(6, 182, 212, 0.2);
+        }
+
+        /* Light Mode Tokens Override */
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.08);
+            --accent-blue-glow: rgba(59, 130, 246, 0.08);
+            --accent-success-glow: rgba(16, 185, 129, 0.08);
+            --shadow-premium: 0 12px 40px -12px rgba(15, 23, 42, 0.08);
+        }
+
+        /* --- BASE STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 30%, var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid currentColor;
+        }
+
+        .badge-cyan { color: var(--accent-cyan); background: var(--accent-cyan-glow); }
+        .badge-warning { color: var(--accent-warning); background: rgba(245, 158, 11, 0.1); }
+        .badge-error { color: var(--accent-error); background: rgba(239, 68, 68, 0.1); }
+
+        /* --- BUTTONS & INTERACTIVES --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            border: none;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-cyan);
+            color: #0b0f19;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-tertiary);
+            border-color: var(--text-muted);
+        }
+
+        .btn-danger {
+            background-color: var(--accent-error);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.25);
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        /* --- STICKY NAVIGATION BAR --- */
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            stroke: var(--accent-cyan);
+            fill: none;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-cyan);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .search-container {
+            position: relative;
+            display: none; /* Hidden on small screens, block on desktop */
+        }
+
+        .search-input {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 8px 12px 8px 36px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            width: 200px;
+            transition: var(--transition-smooth);
+        }
+
+        .search-input:focus {
+            width: 26px;
+            outline: none;
+            border-color: var(--accent-cyan);
+            width: 260px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            stroke: var(--text-muted);
+            fill: none;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition-smooth);
+        }
+
+        .theme-toggle:hover {
+            color: var(--accent-cyan);
+            background: var(--bg-tertiary);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            position: relative;
+            padding: 140px 0 100px 0;
+            background: radial-gradient(circle at 80% 20%, var(--accent-cyan-glow) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, var(--accent-blue-glow) 0%, transparent 50%);
+            overflow: hidden;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero-headline {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+        }
+
+        .hero-headline span {
+            display: block;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-supporting-text {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .trust-indicators {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 32px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .trust-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--accent-success);
+            fill: none;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Cybersecurity Dynamic Radar Graphic */
+        .radar-container {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .radar-sweep {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(from 0deg, var(--accent-cyan-glow) 0deg, transparent 180deg);
+            border-radius: 50%;
+            animation: sweep 6s linear infinite;
+        }
+
+        .radar-core {
+            width: 120px;
+            height: 120px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent-cyan);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-glow);
+            z-index: 2;
+        }
+
+        .radar-core svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--accent-cyan);
+            fill: none;
+        }
+
+        @keyframes sweep {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* --- QUICK HELP EMERGENCY CARDS --- */
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .emergency-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .emergency-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-error);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .card-icon-header {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            background: rgba(239, 68, 68, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-error);
+            margin-bottom: 24px;
+        }
+
+        .emergency-card.edu .card-icon-header {
+            background: var(--accent-cyan-glow);
+            color: var(--accent-cyan);
+        }
+        .emergency-card.edu:hover {
+            border-color: var(--accent-cyan);
+        }
+
+        .card-icon-header svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        /* --- THREAT AWARENESS LIBRARY --- */
+        .threat-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 10px 20px;
+            border-radius: 100px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--accent-blue-glow);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+
+        .threat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .threat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .threat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-premium);
+            border-color: var(--accent-blue);
+        }
+
+        .threat-card-body {
+            padding: 32px;
+        }
+
+        .threat-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .warning-box {
+            background: var(--bg-primary);
+            border-left: 3px solid var(--accent-warning);
+            padding: 12px 16px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        .warning-box strong {
+            display: block;
+            color: var(--accent-warning);
+            margin-bottom: 4px;
+        }
+
+        /* --- GUIDED RESPONSE FRAMEWORK --- */
+        .framework-section {
+            background-color: var(--bg-secondary);
+            border-y: 1px solid var(--border-color);
+        }
+
+        .framework-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            position: relative;
+        }
+
+        .flow-step {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .flow-step:hover {
+            border-color: var(--accent-cyan);
+        }
+
+        .step-number {
+            font-family: var(--font-mono);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--border-color);
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            transition: var(--transition-smooth);
+        }
+
+        .flow-step:hover .step-number {
+            color: var(--accent-cyan-glow);
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            margin-top: 16px;
+        }
+
+        /* --- PREVENTION ZONE --- */
+        .prevention-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .checklist-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 40px;
+        }
+
+        .checklist-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .checklist-title svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent-success);
+            fill: none;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checkbox-mock {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent-success);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .checkbox-mock::after {
+            content: "";
+            width: 10px;
+            height: 5px;
+            border-left: 2px solid var(--accent-success);
+            border-bottom: 2px solid var(--accent-success);
+            transform: rotate(-45deg) translate(1px, -1px);
+        }
+
+        /* --- INTERACTIVE LEARNING CENTER --- */
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .track-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+        }
+
+        .track-card:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .progress-container {
+            margin: 24px 0;
+        }
+
+        .progress-bar-bg {
+            background: var(--bg-tertiary);
+            height: 6px;
+            border-radius: 100px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+            height: 100%;
+            border-radius: 100px;
+        }
+
+        .progress-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* --- ORGANIZATIONS & INSTITUTIONAL SERVICES --- */
+        .institution-section {
+            background: var(--bg-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        /* --- SMART SAFETY TOOLS SECTION --- */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .tool-panel {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-premium);
+        }
+
+        .tool-header-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            stroke: var(--accent-cyan);
+            fill: none;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-input {
+            width: 100%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 0 3px var(--accent-cyan-glow);
+        }
+
+        /* --- TRAINING & MONETIZATION LAYER --- */
+        .monetization-section {
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .price-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+        }
+
+        .price-card.featured {
+            border-color: var(--accent-cyan);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .price-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 24px 0;
+            font-family: var(--font-mono);
+        }
+
+        .price-amount span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-family: var(--font-sans);
+            font-weight: 400;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .price-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .price-features svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--accent-cyan);
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        /* --- TESTIMONIALS / TRUST SECTION --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
+        }
+
+        .quote-text {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            border: 1px solid var(--border-color);
+        }
+
+        /* --- FAQ SECTION ACCORDION --- */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-trigger {
+            width: 100%;
+            padding: 24px;
+            background: none;
+            border: none;
+            text-align: left;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-icon {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-secondary);
+            fill: none;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            padding: 0 24px;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 1000px;
+            transition: max-height 1s cubic-bezier(1, 0, 1, 0);
+            padding-bottom: 24px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            stroke: var(--accent-cyan);
+        }
+
+        /* --- CONTACT / HELP SECTION --- */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 48px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .contact-method {
+            display: flex;
+            gap: 16px;
+        }
+
+        .contact-method-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-cyan);
+            flex-shrink: 0;
+        }
+
+        .contact-method-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            fill: none;
+        }
+
+        /* --- PREMIUM FOOTER --- */
+        .footer-wrapper {
+            background-color: #070a12;
+            border-top: 1px solid var(--border-color);
+            padding: 80px 0 40px 0;
+            color: var(--text-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(4, 1fr);
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand p {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .footer-heading {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 0.85rem;
+        }
+
+        /* --- EMERGENCY PORTAL MODAL --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(7, 10, 18, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-error);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        /* BLOCKQUOTE FOR WARNINGS */
+        blockquote {
+            background: var(--bg-tertiary);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 20px;
+            margin: 32px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            font-style: italic;
+        }
+
+        /* --- RESPONSIVE BREAKPOINTS --- */
+        @media (max-width: 1024px) {
+            .hero-layout, .prevention-layout, .tools-grid, .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-visual {
+                order: -1;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .search-container {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hero-headline {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. STICKY PREMIUM NAVIGATION BAR -->
+    <header class="nav-wrapper">
+        <div class="container nav-container">
+            <a href="#home" class="logo-area" aria-label="Homepage">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+            </a>
+            
+            <nav role="navigation">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#threats" class="nav-link">Threat Library</a></li>
+                    <li><a href="#emergency" class="nav-link">Quick Help</a></li>
+                    <li><a href="#framework" class="nav-link">Prevention</a></li>
+                    <li><a href="#learning" class="nav-link">Training</a></li>
+                    <li><a href="#tools" class="nav-link">Tools</a></li>
+                    <li><a href="#institutions" class="nav-link">Organizations</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    <input type="search" class="search-input" placeholder="Search safety database..." aria-label="Search safety database">
+                </div>
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle structural theme">
+                    <svg viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+
+                <a href="#emergency" class="btn btn-danger" style="padding: 8px 16px; font-size: 0.85rem;">Emergency Help</a>
+                
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero-section">
+        <div class="container hero-layout">
+            <div class="hero-content">
+                <h1 class="hero-headline">Stay Calm. Understand.<span>Act Correctly. Stay Safe.</span></h1>
+                <p class="hero-supporting-text">If you are facing an ongoing online attack, suspicious transaction, or digital extortion, do not panic. This architectural safe zone translates cyber intelligence into immediate, logical defensive steps to protect your identity, family, and assets.</p>
+                <div class="hero-ctas">
+                    <button class="btn btn-primary" onclick="openEmergencyPortal()">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        I Need Help Now
+                    </button>
+                    <a href="#learning" class="btn btn-secondary">Learn Safety Tracks</a>
+                    <a href="#threats" class="btn btn-secondary" style="border-color: transparent; color: var(--accent-cyan);">Explore Active Threats &rarr;</a>
+                </div>
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        Government Aligned Guidance
+                    </div>
+                    <div class="trust-item">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                        Zero-Data-Retention Diagnosis
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="radar-container">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-core">
+                        <svg viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. QUICK HELP EMERGENCY CARDS -->
+    <section id="emergency" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-error">Immediate Action</span>
+                <h2 class="section-title">What is happening right now?</h2>
+                <p class="section-subtitle">Select the option that mirrors your crisis to receive optimized, calm operational containment procedures.</p>
+            </div>
+            
+            <div class="emergency-grid">
+                <!-- Situation 1 -->
+                <div class="emergency-card">
+                    <div>
+                        <div class="card-icon-header">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="card-title">I Was Scammed</h3>
+                        <p class="card-desc">Lost funds via mobile transaction, card payment, or banking portal? Stop further outflow instantly.</p>
+                    </div>
+                    <a href="mitigation/financial-loss.html" class="btn btn-secondary">Get Containment Steps</a>
+                </div>
+
+                <!-- Situation 2 -->
+                <div class="emergency-card">
+                    <div>
+                        <div class="card-icon-header">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                        </div>
+                        <h3 class="card-title">Suspicious Message</h3>
+                        <p class="card-desc">Received an SMS or WhatsApp threatening account closure or claiming an unverified prize reward.</p>
+                    </div>
+                    <a href="mitigation/phishing-triage.html" class="btn btn-secondary">Analyze Message</a>
+                </div>
+
+                <!-- Situation 3 -->
+                <div class="emergency-card">
+                    <div>
+                        <div class="card-icon-header">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="card-title">Fake Job Offer</h3>
+                        <p class="card-desc">Offered an employment role demanding upfront registration fees, training fees, or equipment payments.</p>
+                    </div>
+                    <a href="mitigation/employment-fraud.html" class="btn btn-secondary">Verify Authenticity</a>
+                </div>
+
+                <!-- Situation 4 -->
+                <div class="emergency-card">
+                    <div>
+                        <div class="card-icon-header">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="card-title">M-Pesa / Mobile Scam</h3>
+                        <p class="card-desc">A caller claiming to be a telecom agent is instructing you to dial code sequences (*#...) or verify PIN configurations.</p>
+                    </div>
+                    <a href="mitigation/mobile-money.html" class="btn btn-secondary">Block Interception</a>
+                </div>
+
+                <!-- Situation 5 -->
+                <div class="emergency-card">
+                    <div>
+                        <div class="card-icon-header">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                        </div>
+                        <h3 class="card-title">Hacked Account</h3>
+                        <p class="card-desc">Locked out of Facebook, WhatsApp, or email because someone modified authentication vectors or passwords.</p>
+                    </div>
+                    <a href="mitigation/account-recovery.html" class="btn btn-secondary">Initiate Recovery</a>
+                </div>
+
+                <!-- Situation 6 -->
+                <div class="emergency-card edu">
+                    <div>
+                        <div class="card-icon-header">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        </div>
+                        <h3 class="card-title">Teach Me Cybersecurity</h3>
+                        <p class="card-desc">No active emergency? Strengthen your structural understanding of systemic defensive mechanisms.</p>
+                    </div>
+                    <a href="#learning" class="btn btn-primary">Start Training</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. THREAT AWARENESS LIBRARY -->
+    <section id="threats" class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Threat Library</span>
+                <h2 class="section-title">Classified Exploitation Library</h2>
+                <p class="section-subtitle">A database detailing structural threat mechanics, explicit warning signs, and preventative strategies.</p>
+            </div>
+
+            <div class="threat-tabs">
+                <button class="tab-btn active">All Threats</button>
+                <button class="tab-btn">Financial Scams</button>
+                <button class="tab-btn">Cyber Infrastructure</button>
+                <button class="tab-btn">Social Risks</button>
+            </div>
+
+            <div class="threat-grid">
+                <!-- Threat 1 -->
+                <div class="threat-card">
+                    <div class="threat-card-body">
+                        <div class="threat-meta">
+                            <span class="badge badge-error">Risk: Critical</span>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">REF: TH-024</span>
+                        </div>
+                        <h3 class="card-title">M-Pesa Reversal Exploitation</h3>
+                        <p class="card-desc">Attackers mimic automated transaction notification system SMS profiles to claim they sent funds erroneously, demanding an immediate reciprocal transfer.</p>
+                        <div class="warning-box">
+                            <strong>Critical Indicators:</strong>
+                            No baseline change in actual balance statement; the message structural text originates from a custom numeric phone line rather than the official institutional alphabetic trunk.
+                        </div>
+                        <a href="library/mpesa-reversals.html" class="btn btn-secondary" style="width: 100%;">Deconstruct Vector</a>
+                    </div>
+                </div>
+
+                <!-- Threat 2 -->
+                <div class="threat-card">
+                    <div class="threat-card-body">
+                        <div class="threat-meta">
+                            <span class="badge badge-cyan">Risk: Moderate</span>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">REF: TH-109</span>
+                        </div>
+                        <h3 class="card-title">Credential Phishing Campaigns</h3>
+                        <p class="card-desc">Deceptive layout interfaces configured to closely mimic banking platforms, corporate email interfaces, or government single sign-on access gateways.</p>
+                        <div class="warning-box">
+                            <strong>Critical Indicators:</strong>
+                            Anomalous root domains (e.g., login.internal-sec-verify.com), lack of valid cryptographic certificate lineage, forced emotional urgency patterns.
+                        </div>
+                        <a href="library/phishing.html" class="btn btn-secondary" style="width: 100%;">Deconstruct Vector</a>
+                    </div>
+                </div>
+
+                <!-- Threat 3 -->
+                <div class="threat-card">
+                    <div class="threat-card-body">
+                        <div class="threat-meta">
+                            <span class="badge badge-warning">Risk: High</span>
+                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">REF: TH-057</span>
+                        </div>
+                        <h3 class="card-title">Digital Blackmail & Sextortion</h3>
+                        <p class="card-desc">Malicious threat actors compromise an individual's private images or scrape public visual datasets to manufacture leverage, demanding cryptocurrency or fiat tracking payloads.</p>
+                        <div class="warning-box">
+                            <strong>Critical Indicators:</strong>
+                            Demands for non-traceable assets; threat profiles attempting execution across peer networks or family organizational units.
+                        </div>
+                        <a href="library/extortion.html" class="btn btn-secondary" style="width: 100%;">Deconstruct Vector</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GUIDED RESPONSE FRAMEWORK -->
+    <section id="framework" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Philosophy</span>
+                <h2 class="section-title">The Guided Response Framework</h2>
+                <p class="section-subtitle">Our structural core protocol designed to navigate users away from chaotic panic toward calculated operational resolution.</p>
+            </div>
+
+            <div class="framework-flow">
+                <div class="flow-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Understand</h3>
+                    <p class="card-desc">Isolate the situation logically. Determine whether the vulnerability lies at the network layer, device layer, or psychological layer (social engineering).</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Act</h3>
+                    <p class="card-desc">Execute immediate mitigation routines: cycle credentials, isolate subnets, notify banking risk vectors, and cut systemic operational access points.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Prevent</h3>
+                    <p class="card-desc">Impose proactive structural boundaries: construct robust multi-factor cryptographic loops, decouple identities, and harden device vectors.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Stay Vigilant</h3>
+                    <p class="card-desc">Incorporate continuous behavioral testing routines. Consume localized ecosystem intelligence updates to intercept novel exploitation frameworks early.</p>
+                </div>
+            </div>
+
+            <blockquote>
+                "Cybersecurity is not an engineering destination; it is a continuously maintained baseline of structural operational hygiene."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- 6. PREVENTION ZONE -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="prevention-layout">
+                <div class="checklist-container">
+                    <h3 class="checklist-title">
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Daily Digital Hygiene Blueprint
+                    </h3>
+                    <div class="checklist-item">
+                        <div class="checkbox-mock"></div>
+                        <div>
+                            <strong style="display:block; margin-bottom: 4px;">Enforce Application Isolation</strong>
+                            <p class="card-desc" style="font-size: 0.85rem; margin:0;">Validate software permissions regularly, pruning unused exposure contexts.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox-mock"></div>
+                        <div>
+                            <strong style="display:block; margin-bottom: 4px;">Implement Identity Decoupling</strong>
+                            <p class="card-desc" style="font-size: 0.85rem; margin:0;">Never bind core physical asset notification mechanisms to secondary web accounts.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checkbox-mock"></div>
+                        <div>
+                            <strong style="display:block; margin-bottom: 4px;">Enforce Pathing Routines</strong>
+                            <p class="card-desc" style="font-size: 0.85rem; margin:0;">Automate kernel and firmware updates across edge terminals within 24 hours of drop.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="badge badge-cyan" style="align-self: flex-start; margin-bottom: 16px;">Defensive Controls</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Protect Assets and Digital Identities Permanently</h2>
+                    <p class="card-desc">Most systemic victimization loops do not trigger because of complex, nation-state cryptographic breaches. They succeed because edge users lack scannable, step-by-step verification blueprints when encountering anomalies.</p>
+                    <p class="card-desc">By instituting our foundational money protection templates and network containment guidelines, you reduce your attack surface area significantly.</p>
+                    <div style="margin-top: 16px;">
+                        <a href="blueprints/all-controls.html" class="btn btn-primary">Access Structural Blueprints</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE LEARNING CENTER -->
+    <section id="learning" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Curriculum</span>
+                <h2 class="section-title">Ecosystem Literacy Tracks</h2>
+                <p class="section-subtitle">Progressive training frameworks structured to scale defensive competence from baseline digital mechanics to operational compliance.</p>
+            </div>
+
+            <div class="learning-grid">
+                <!-- Track 1 -->
+                <div class="track-card">
+                    <div>
+                        <span class="badge badge-cyan" style="margin-bottom: 16px;">Level 1</span>
+                        <h3 class="card-title">Foundational Cyber Defense</h3>
+                        <p class="card-desc">Demystifying password topologies, multi-factor architectures, and social engineering micro-vectors targeting individual citizens.</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
+                        <div class="progress-meta"><span>Status: Open Access</span><span>100% Free</span></div>
+                    </div>
+                    <a href="academy/track-1.html" class="btn btn-secondary">Initialize Modules</a>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="track-card">
+                    <div>
+                        <span class="badge badge-warning" style="margin-bottom: 16px;">Level 2</span>
+                        <h3 class="card-title">Mobile Asset Protection</h3>
+                        <p class="card-desc">Deep-dive technical investigation into mobile carrier loop-holes, SIM swap defenses, and mobile money API structural vulnerabilities.</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 40%;"></div></div>
+                        <div class="progress-meta"><span>Status: 4/10 Modules Complete</span><span>Progress Saved</span></div>
+                    </div>
+                    <a href="academy/track-2.html" class="btn btn-primary">Resume Learning</a>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="track-card">
+                    <div>
+                        <span class="badge badge-error" style="margin-bottom: 16px;">Level 3</span>
+                        <h3 class="card-title">Institutional Risk Mitigation</h3>
+                        <p class="card-desc">Architected for business managers, legal groups, and NGO coordinators looking to construct corporate defense policy paradigms.</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 0%;"></div></div>
+                        <div class="progress-meta"><span>Status: Locked</span><span>Requires Corporate Auth</span></div>
+                    </div>
+                    <a href="academy/track-3.html" class="btn btn-secondary">Request Verification</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ORGANIZATIONS & INSTITUTIONAL SERVICES -->
+    <section id="institutions" class="section-padding institution-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Enterprise Matrix</span>
+                <h2 class="section-title">Institutional Protection Portfolios</h2>
+                <p class="section-subtitle">Providing structural hardening blueprints across localized public and enterprise ecosystems.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="card-title" style="font-size: 1.15rem;">Academic Frameworks</h3>
+                    <p class="card-desc" style="font-size: 0.85rem;">Shield school data grids and educate student bodies via non-alarmist interactive literacy sessions.</p>
+                    <a href="services/academic.html" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Request Audit &rarr;</a>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title" style="font-size: 1.15rem;">SME & SACCO Security</h3>
+                    <p class="card-desc" style="font-size: 0.85rem;">Defend transaction accounting frameworks from internal and distributed digital diversion schemes.</p>
+                    <a href="services/sacco.html" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Request Audit &rarr;</a>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title" style="font-size: 1.15rem;">NGO Target Hardening</h3>
+                    <p class="card-desc" style="font-size: 0.85rem;">Harden remote worker endpoints operating within regions susceptible to physical and structural network threats.</p>
+                    <a href="services/ngo.html" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Request Audit &rarr;</a>
+                </div>
+                <div class="service-card">
+                    <h3 class="card-title" style="font-size: 1.15rem;">Law Enforcement Sync</h3>
+                    <p class="card-desc" style="font-size: 0.85rem;">Standardize chain-of-custody protocols for rapid ingestion of digital evidence from civilian vectors.</p>
+                    <a href="services/le.html" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.85rem; font-weight: 600;">Request Integration &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. SMART SAFETY TOOLS SECTION -->
+    <section id="tools" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Automation Node</span>
+                <h2 class="section-title">Cryptographic Verification Panels</h2>
+                <p class="section-subtitle">Standalone zero-log algorithmic testing models built to parse payload parameters and structural intent safely.</p>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Tool 1 -->
+                <div class="tool-panel">
+                    <div class="tool-header-meta">
+                        <svg class="tool-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <h3 class="card-title" style="margin-bottom: 0;">Heuristic Scam & URL Verifier</h3>
+                    </div>
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label class="form-label">Input Target Domain, URL or Phone Number</label>
+                            <input type="text" class="form-input" placeholder="e.g., http://safaricom-verification-portal.net or +2547..." aria-label="Verification Target Input">
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">Execute Zero-Logs Analysis</button>
+                    </form>
+                </div>
+
+                <!-- Tool 2 -->
+                <div class="tool-panel">
+                    <div class="tool-header-meta">
+                        <svg class="tool-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        <h3 class="card-title" style="margin-bottom: 0;">Suspicious Corpus Text Engine</h3>
+                    </div>
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label class="form-label">Paste SMS or Email Body Paragraph Text</label>
+                            <textarea class="form-input" rows="3" placeholder="Paste incoming string verbatim here..." style="resize: none;" aria-label="Suspicious Text Box"></textarea>
+                        </div>
+                        <button class="btn btn-secondary" style="width: 100%; border-color: var(--accent-cyan); color: var(--accent-cyan);">Run Structural Match Test</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. TRAINING & MONETIZATION LAYER -->
+    <section class="section-padding monetization-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Ethical Sustainability</span>
+                <h2 class="section-title">Specialized Corporate Resilience Ecosystems</h2>
+                <p class="section-subtitle">Our public diagnostic infrastructure remains open access forever. Premium organizational deployments and customized testing modules fund this mission sustainably.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Tier 1 -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Civilian Access Core</h3>
+                        <p class="card-desc" style="font-size: 0.85rem; margin:0;">For individual defense, small family cells, and open learning paths.</p>
+                        <div class="price-amount">Ksh 0 <span>/ Permanent</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Complete Threat Library Access</li>
+                        <li><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Crisis Mitigation Pathfinders</li>
+                        <li><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Public Cryptographic Tools</li>
+                    </ul>
+                    <a href="#learning" class="btn btn-secondary" style="width: 100%;">Default Open Track</a>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="price-card featured">
+                    <div class="price-header">
+                        <span class="badge badge-cyan" style="position: absolute; top: 24px; right: 24px;">Recommended</span>
+                        <h3>Enterprise Shield Layer</h3>
+                        <p class="card-desc" style="font-size: 0.85rem; margin:0;">For manufacturing facilities, corporate architectures, and regional SACCO nodes.</p>
+                        <div class="price-amount">Contact <span>/ Bespoke Deployment</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Customized Phishing Simulators</li>
+                        <li><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Dedicated Incident Response Portals</li>
+                        <li><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Regulatory Compliance Alignment</li>
+                    </ul>
+                    <a href="procurement/enterprise-request.html" class="btn btn-primary" style="width: 100%;">Initiate Procurement Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. TESTIMONIALS / TRUST SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Validation</span>
+                <h2 class="section-title">Ecosystem Stability Outcomes</h2>
+                <p class="section-subtitle">Verifiable telemetry from individual users and systems operating inside challenging threat matrix sectors.</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="quote-text">"When our accounting department faced a simulated operational fallback challenge, the Quick Help matrix minimized exposure window time from hours down to minutes."</p>
+                    <div class="author-meta">
+                        <div class="author-avatar">OM</div>
+                        <div>
+                            <strong style="display: block; font-size: 0.95rem;">Operations Manager</strong>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Agricultural Cooperatives Node</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote-text">"I nearly reversed a significant mobile vendor invoice transaction based on a highly accurate spoofing text sequence. The Heuristic Tracker intercepted the panic loop instantly."</p>
+                    <div class="author-meta">
+                        <div class="author-avatar">KB</div>
+                        <div>
+                            <strong style="display: block; font-size: 0.95rem;">Independent Enterprise Owner</strong>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Nairobi Retail Vector</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ SECTION Accordion -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">FAQ</span>
+                <h2 class="section-title">Structural System Mechanics</h2>
+                <p class="section-subtitle">Clarifying operational integrity parameters, metrics tracking, and platform architecture processing paths.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        Does this validation portal ingest or cache my private data profiles?
+                        <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>No. The Citizen Safety ecosystem is built on strict data minimization guidelines. Input strings, targeted validation domains, and context logs are queried in dynamic volatile memory loops and completely discarded post-processing without physical disc caching operations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        How should our group report active vectors directly to state cybersecurity operators?
+                        <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>All emergency pipelines compiled here integrate with automated telemetry relays matching localized law enforcement format schemas (e.g., National KE-CIRT clusters). The system exports clean, cryptographically signed JSON evidence blobs directly to state-side investigators.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. CONTACT / HELP SECTION -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-cyan">Secure Gateway</span>
+                <h2 class="section-title">Establish Operational Comms</h2>
+                <p class="section-subtitle">Reach out for custom educational deployments, institutional hardening tasks, or validated structural inquiries.</p>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-method-icon">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 4px;">Cryptographic Ingestion Node</h4>
+                            <p class="card-desc" style="font-size: 0.9rem; margin:0;">secure-intake@citizen-safety.or.ke</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-method-icon">
+                            <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 4px;">Regional Operations Hotline</h4>
+                            <p class="card-desc" style="font-size: 0.9rem; margin:0;">+254 (0) 200 777 000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-panel" style="padding: 32px;">
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label class="form-label">Secure Return Address (Email)</label>
+                            <input type="email" class="form-input" required aria-label="Contact Email">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Classification Scope</label>
+                            <input type="text" class="form-input" placeholder="e.g., Threat Intel Sharing / Audit Request" aria-label="Scope Classification">
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;">Transmit Message Package</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. PREMIUM FOOTER -->
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo-area" style="margin-bottom: 16px;">
+                        <svg class="logo-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+                    </a>
+                    <p>Securing the civilian perimeter. Hardening distributed interfaces through accessible education, step-by-step mitigation patterns, and sovereign network telemetry tracking tools.</p>
+                </div>
+                
+                <div>
+                    <h5 class="footer-heading">Emergency Nodes</h5>
+                    <ul class="footer-links">
+                        <li><a href="mitigation/financial-loss.html">Financial Escrow Losses</a></li>
+                        <li><a href="mitigation/phishing-triage.html">Identity Vector Hardening</a></li>
+                        <li><a href="mitigation/mobile-money.html">M-Pesa Attack Isolation</a></li>
+                        <li><a href="mitigation/account-recovery.html">Credential Sync Retrieval</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Intel Core</h5>
+                    <ul class="footer-links">
+                        <li><a href="#threats">Threat Database Repository</a></li>
+                        <li><a href="library/indicators.html">Ecosystem Compromise Indicators</a></li>
+                        <li><a href="library/research-papers.html">Structural Vector Papers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Ecosystem Partners</h5>
+                    <ul class="footer-links">
+                        <li><a href="partners/government.html">State Security Units</a></li>
+                        <li><a href="partners/telecoms.html">Carrier Infrastructure Nodes</a></li>
+                        <li><a href="partners/banking.html">Central Asset Reserves</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Legal & Compliance</h5>
+                    <ul class="footer-links">
+                        <li><a href="legal/privacy.html">Data Retention Exemptions</a></li>
+                        <li><a href="legal/terms.html">Usage Operating Mandates</a></li>
+                        <li><a href="legal/liability.html">Liability Disclaimers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Citizen Safety Ecosystem. All sovereign rights reserved. Built to KeCIRT / ISO 27001 operational standards.</p>
+                <div style="display:flex; gap: 24px;">
+                    <a href="#home" style="color: var(--text-muted); text-decoration:none;">Back to Operation Apex</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EMERGENCY MODAL ENTRY LAYER -->
+    <div class="modal-overlay" id="emergencyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="card-title" style="color: var(--accent-error); margin-bottom: 0; display:flex; align-items:center; gap: 8px;">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    Critical Incident Triage Protocol
+                </h3>
+                <button class="modal-close" onclick="closeEmergencyPortal()" aria-label="Close crisis portal">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <p class="card-desc">The automatic alert system is preparing to guide you. To maximize safety parameters, confirm whether financial transaction vectors are currently hanging open.</p>
+            <div style="display: flex; flex-direction:column; gap: 12px; margin-top: 24px;">
+                <a href="mitigation/financial-loss.html" class="btn btn-danger">Yes: Assets/Funds are Moving Instantly</a>
+                <a href="mitigation/account-recovery.html" class="btn btn-secondary">No: Compromise affects Account Access / Privacy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- JAVASCRIPT SYSTEM CONTROLS --- -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Architecture Switcher
+            const themeToggle = document.getElementById('themeToggle');
+            const storedTheme = localStorage.getItem('theme-token') || 'dark';
+            document.documentElement.setAttribute('data-theme', storedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', targetTheme);
+                localStorage.setItem('theme-token', targetTheme);
+            });
+
+            // Accordion Logic Framework
+            const faqTriggers = document.querySelectorAll('.faq-trigger');
+            faqTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const parent = trigger.parentElement;
+                    const isOpen = parent.classList.contains('active');
+                    
+                    // Collapse all adjacent nodes
+                    document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+                    document.querySelectorAll('.faq-trigger').forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+                    
+                    if (!isOpen) {
+                        parent.classList.add('active');
+                        trigger.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Mobile Navigation Toggle Handler
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinksContainer = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                const visible = navLinksContainer.style.display === 'flex';
+                navLinksContainer.style.display = visible ? 'none' : 'flex';
+                navLinksContainer.style.flexDirection = 'column';
+                navLinksContainer.style.position = 'absolute';
+                navLinksContainer.style.top = '80px';
+                navLinksContainer.style.left = '0';
+                navLinksContainer.style.width = '100%';
+                navLinksContainer.style.backgroundColor = 'var(--bg-secondary)';
+                navLinksContainer.style.padding = '24px';
+                navLinksContainer.style.borderBottom = '1px solid var(--border-color)';
+            });
+        });
+
+        // Modal Action Controllers
+        const modal = document.getElementById('emergencyModal');
+        
+        function openEmergencyPortal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Lock base layouts
+        }
+
+        function closeEmergencyPortal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Unlock viewport tracking
+        }
+
+        // Close modal if outer boundary clicked
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) closeEmergencyPortal();
+        });
+    </script>
+</body>
+</html>
