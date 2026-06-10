@@ -1,1 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Sustainability &amp; Transparency Funding | Citizen Safety</title>
+    
+    <meta name="description" content="Support public-interest cybersecurity education, open threat research, and community scam prevention systems. Transparent funding model built for civic resilience.">
+    <meta name="keywords" content="cybersecurity funding, open source threat intel, civic technology donation, corporate social responsibility, M-Pesa fraud education">
+    <meta name="author" content="Citizen Safety &amp; Cyber Awareness System">
+    <meta name="robots" content="index, follow">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://safety.citizen.go.ke/donate.html">
+    <meta property="og:title" content="Empower Public Digital Safety | Citizen Safety">
+    <meta property="og:description" content="Fund open-access defense frameworks, vulnerable community training infrastructure, and vendor-neutral scam analysis.">
+    <meta property="og:image" content="assets/og-sustainability-image.jpg">
+
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230b0f19'/><path d='M50 20 L75 35 L75 65 L50 80 L25 65 L25 35 Z' fill='none' stroke='%2306b6d4' stroke-width='5'/><circle cx='50' cy='50' r='8' fill='%233b82f6'/></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ACADEMIC-SECURITY SYSTEM DESIGN TOKENS --- */
+        :root {
+            /* Color Foundations - Deep Shield Dark Theme Baseline */
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-tertiary: #1f2937;
+            --bg-glass: rgba(17, 24, 39, 0.85);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            
+            /* Accent Core Matrix */
+            --accent-cyan: #06b6d4;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.12);
+            --accent-blue: #3b82f6;
+            --accent-blue-glow: rgba(59, 130, 246, 0.12);
+            --accent-green: #10b981;
+            --accent-green-glow: rgba(16, 185, 129, 0.12);
+            --accent-error: #ef4444;
+
+            /* Structural System Grid */
+            --max-width: 1280px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition-premium: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+            --shadow-cyan-glow: 0 0 30px rgba(6, 182, 212, 0.15);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --accent-cyan-glow: rgba(6, 182, 212, 0.06);
+            --accent-blue-glow: rgba(59, 130, 246, 0.06);
+            --accent-green-glow: rgba(16, 185, 129, 0.06);
+            --shadow-premium: 0 20px 40px -15px rgba(15, 23, 42, 0.06);
+        }
+
+        /* --- GLOBAL BASICS & RESET MATRIX --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.625;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 120px 0; }
+        .section-header { text-align: center; max-width: 760px; margin: 0 auto 64px auto; }
+        .section-title {
+            font-size: 2.5rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 40%, var(--text-secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle { color: var(--text-secondary); font-size: 1.125rem; }
+
+        /* UI Atomic Badges & Buttons */
+        .badge {
+            display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 100px;
+            font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+            border: 1px solid currentColor; margin-bottom: 20px;
+        }
+        .badge-cyan { color: var(--accent-cyan); background: var(--accent-cyan-glow); }
+        .badge-blue { color: var(--accent-blue); background: var(--accent-blue-glow); }
+        .badge-green { color: var(--accent-green); background: var(--accent-green-glow); }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px;
+            font-size: 0.95rem; font-weight: 600; border-radius: var(--radius-sm); cursor: pointer;
+            transition: var(--transition-premium); text-decoration: none; border: none; gap: 10px;
+        }
+        .btn-primary { background-color: var(--accent-cyan); color: #0b0f19; box-shadow: var(--shadow-cyan-glow); }
+        .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn-secondary { background-color: transparent; color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background-color: var(--bg-tertiary); border-color: var(--text-secondary); }
+        
+        .btn-outline { 
+            background: transparent; 
+            border: 1px solid var(--border-color); 
+            color: var(--text-primary);
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition-premium);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            background: var(--accent-cyan-glow);
+            color: var(--accent-cyan);
+        }
+
+        /* --- 1. STICKY NAVIGATION BAR --- */
+        .nav-wrapper {
+            position: sticky; top: 0; z-index: 1000; background: var(--bg-glass);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color); transition: var(--transition-premium);
+        }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+        .logo-icon { width: 36px; height: 36px; stroke: var(--accent-cyan); fill: none; }
+        .logo-text { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+        .nav-links { display: flex; align-items: center; gap: 20px; list-style: none; }
+        .nav-link { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: var(--transition-premium); }
+        .nav-link:hover, .nav-link.active { color: var(--accent-cyan); }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        
+        .search-placeholder {
+            background: var(--bg-tertiary); border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm); padding: 8px 14px; font-size: 0.85rem;
+            color: var(--text-muted); width: 140px; cursor: not-allowed;
+        }
+        .theme-toggle {
+            background: none; border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+            width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            color: var(--text-secondary); transition: var(--transition-premium);
+        }
+        .theme-toggle:hover { color: var(--accent-cyan); background: var(--bg-tertiary); }
+        .theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; }
+        .menu-toggle { display: none; background: none; border: none; color: var(--text-primary); cursor: pointer; }
+
+        /* --- 2. HERO SUSTAINABILITY HEADLINE --- */
+        .hero-section {
+            padding: 160px 0 120px 0;
+            background: radial-gradient(circle at 80% 20%, var(--accent-cyan-glow) 0%, transparent 60%);
+            text-align: center;
+        }
+        .hero-headline { font-size: 3.75rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 24px; }
+        .hero-headline span { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-supporting-text { font-size: 1.25rem; color: var(--text-secondary); max-width: 780px; margin: 0 auto 44px auto; }
+        .hero-ctas { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+        /* --- 3. MISSION FUNDING EXPLANATION BLOCK --- */
+        .mission-allocation-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: center; }
+        .allocation-list { list-style: none; }
+        .allocation-item { display: flex; gap: 16px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color); }
+        .allocation-marker { font-family: var(--font-mono); font-weight: 600; color: var(--accent-cyan); }
+
+        /* --- 4. MEASURABLE IMPACT SYSTEM CARDS --- */
+        .impact-section { background: var(--bg-secondary); border-y: 1px solid var(--border-color); }
+        .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+        .impact-card { background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 32px; transition: var(--transition-premium); }
+        .impact-card:hover { transform: translateY(-4px); border-color: var(--accent-blue); }
+        .impact-metric { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; color: var(--accent-green); margin-bottom: 12px; display: block; }
+
+        /* --- 5. SECURE STRUCTURED CONTRIBUTIONS --- */
+        .contribute-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+        .tier-card {
+            background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg);
+            padding: 48px 40px; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition-premium);
+        }
+        .tier-card.featured { border-color: var(--accent-cyan); box-shadow: var(--shadow-cyan-glow); position: relative; }
+        .tier-card.featured::top-deck { content: 'CRITICAL VALUE'; position: absolute; top: -12px; right: 24px; background: var(--accent-cyan); color: #0b0f19; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; letter-spacing: 0.05em; }
+        .tier-header h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; }
+        .tier-header p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; min-height: 44px; }
+        
+        /* Custom Input Architecture */
+        .custom-funding-input {
+            position: relative; margin-bottom: 24px; display: flex; align-items: center;
+            background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+        }
+        .custom-funding-input span { padding-left: 16px; font-family: var(--font-mono); color: var(--text-muted); font-size: 0.95rem; }
+        .custom-funding-input input {
+            width: 100%; background: transparent; border: none; padding: 14px 16px;
+            color: var(--text-primary); font-family: var(--font-mono); font-size: 1.25rem; font-weight: 600; outline: none;
+        }
+
+        /* --- 6. TRANSPARENCY DASHBOARD MATRIX --- */
+        .transparency-wrap { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 56px; }
+        .ledger-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 16px 0; border-bottom: 1px solid var(--border-color); font-size: 0.95rem; }
+        .ledger-row.header { border-bottom: 2px solid var(--text-muted); font-weight: 600; color: var(--text-primary); }
+        .ledger-row.footer { border-bottom: none; border-top: 2px dashed var(--border-color); font-weight: 700; padding-top: 24px; font-size: 1.1rem; }
+
+        /* --- 8. ASSURANCE TRUST ENGINE PROTOCOLS --- */
+        .assurance-matrix { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 48px; }
+        .assurance-node { display: flex; gap: 20px; }
+        .assurance-icon { width: 44px; height: 44px; stroke: var(--accent-cyan); fill: none; shrink: 0; }
+
+        /* --- 9. INSTITUTIONAL & CORPORATE SPONSORSHIP --- */
+        .sponsor-box { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 64px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
+
+        /* --- 10. FAQ ACCORDION MANAGEMENT --- */
+        .faq-wrapper { max-width: 840px; margin: 0 auto; }
+        .faq-item { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-bottom: 16px; overflow: hidden; }
+        .faq-trigger { width: 100%; padding: 24px; background: none; border: none; text-align: left; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-icon { width: 20px; height: 20px; stroke: var(--text-secondary); fill: none; transition: var(--transition-premium); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1); padding: 0 24px; color: var(--text-secondary); }
+        .faq-item.active .faq-content { max-height: 300px; padding-bottom: 24px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); stroke: var(--accent-cyan); }
+
+        /* --- 12. PREMIUM FOOTER SYSTEM --- */
+        .footer-wrapper { background-color: #080b11; border-top: 1px solid var(--border-color); padding: 96px 0 48px 0; color: var(--text-secondary); }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 48px; margin-bottom: 64px; }
+        .footer-heading { color: var(--text-primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 24px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: var(--transition-premium); }
+        .footer-links a:hover { color: var(--accent-cyan); }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 0.85rem; }
+
+        /* --- RESPONSIVE SURFACE CONTROLS --- */
+        @media (max-width: 1024px) {
+            .contribute-grid { grid-template-columns: 1fr; }
+            .mission-allocation-grid, .sponsor-box { grid-template-columns: 1fr; gap: 40px; }
+            .assurance-matrix { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .search-placeholder { display: none; }
+            .menu-toggle { display: block; }
+            .hero-headline { font-size: 2.5rem; }
+            .transparency-wrap { padding: 24px; }
+            .ledger-row { grid-template-columns: 1.5fr 1fr 1fr; font-size: 0.8rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-wrapper">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area" aria-label="Home Platform Link">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+            </a>
+            
+            <nav role="navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="library.html" class="nav-link">Threat Library</a></li>
+                    <li><a href="index.html#emergency" class="nav-link">Quick Help</a></li>
+                    <li><a href="prevention.html" class="nav-link">Prevention</a></li>
+                    <li><a href="training.html" class="nav-link">Training</a></li>
+                    <li><a href="organizations.html" class="nav-link">Organizations</a></li>
+                    <li><a href="tools.html" class="nav-link">Tools</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-placeholder">Press / to search...</div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle system color theme">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </button>
+                <a href="index.html#emergency" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem; background-color: var(--accent-error); color:#fff; box-shadow:none;">Emergency Hub</a>
+                <button class="menu-toggle" aria-label="Trigger Responsive Navbar Menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <span class="badge badge-cyan">Sovereign Mission Funding</span>
+            <h1 class="hero-headline">Support a Transparent, <span>Safer Digital Society</span></h1>
+            <p class="hero-supporting-text">We maintain public, vendor-neutral infrastructure to protect citizens, local schools, and community institutions from targeted scams. No tracking. No commercial manipulation.</p>
+            <div class="hero-ctas">
+                <a href="#contribute" class="btn btn-primary">Support the Mission</a>
+                <a href="#transparency" class="btn btn-secondary">Review Financial Allocation Ledger</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="mission-allocation-grid">
+            <div>
+                <span class="badge badge-blue">Allocation Principles</span>
+                <h2 style="font-size:2rem; font-weight:700; margin-bottom:20px; letter-spacing:-0.02em;">Where Your Contributions Are Deployed</h2>
+                <p style="color:var(--text-secondary); margin-bottom:24px;">To guarantee complete objectivity and stay free from commercial vendor biases, we rely on independent public contributions. Every shilling is tracked and spent according to clear engineering standards.</p>
+                <div style="font-family:var(--font-mono); font-size:0.85rem; color:var(--accent-cyan);">Accountability Standard: 100% Transparent Auditing</div>
+            </div>
+            <div>
+                <ul class="allocation-list">
+                    <li class="allocation-item">
+                        <span class="allocation-marker">01 /</span>
+                        <div>
+                            <h4 style="margin-bottom:4px;">Open Security Tools Development</h4>
+                            <p style="color:var(--text-secondary); font-size:0.9rem;">Building public-good software, SMS verification tools, and secure frameworks to identify local transaction frauds.</p>
+                        </div>
+                    </li>
+                    <li class="allocation-item">
+                        <span class="allocation-marker">02 /</span>
+                        <div>
+                            <h4 style="margin-bottom:4px;">Community Academy Classrooms</h4>
+                            <p style="color:var(--text-secondary); font-size:0.9rem;">Funding localized safety guides and digital protection workshops for schools, local SACCO markets, and elder demographics.</p>
+                        </div>
+                    </li>
+                    <li class="allocation-item">
+                        <span class="allocation-marker">03 /</span>
+                        <div>
+                            <h4 style="margin-bottom:4px;">Independent Intelligence Maintenance</h4>
+                            <p style="color:var(--text-secondary); font-size:0.9rem;">Keeping threat libraries up to date without charging user fees, ensuring safety knowledge stays free for everyone.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding impact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-green">Operational Footprint</span>
+                <h2 class="section-title">Measurable Open Outcomes</h2>
+                <p class="section-subtitle">A real-time overview of our public threat safety activities financed entirely through independent support channels.</p>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <span class="impact-metric">14,200+</span>
+                    <h4 style="margin-bottom:8px;">Citizens Informed</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Protected from transaction fraud loops through open-access alerts and interactive threat dashboards.</p>
+                </div>
+                <div class="impact-card">
+                    <span class="impact-metric">38 Schools</span>
+                    <h4 style="margin-bottom:8px;">Institutions Equipped</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Supplied with tailored cybersecurity basics curricula and response templates for local tech hubs.</p>
+                </div>
+                <div class="impact-card">
+                    <span class="impact-metric">24/7/365</span>
+                    <h4 style="margin-bottom:8px;">Zero-Cost Diagnostics</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Free network checking logs and indicators of compromise remain live for public query.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contribute" class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-cyan">Sustained Matrix</span>
+            <h2 class="section-title">Select Voluntary Allocation</h2>
+            <p class="section-subtitle">Choose a supportive structure that fits your resource scale. No recurring loops without explicit ongoing permission.</p>
+        </div>
+
+        <div class="contribute-grid">
+            <div class="tier-card">
+                <div class="tier-header">
+                    <h3>One-Time Action</h3>
+                    <p>Directly funds immediate tool updates and localized threat analysis patches.</p>
+                    <div class="custom-funding-input">
+                        <span>KES</span>
+                        <input type="number" value="1500" min="100" aria-label="Custom one-time contribution amount">
+                    </div>
+                </div>
+                <a href="checkout.html?mode=onetime&amp;amt=1500" class="btn btn-outline payment-trigger">Process Voluntary Support</a>
+            </div>
+
+            <div class="tier-card featured">
+                <div class="tier-header">
+                    <h3>Sustained Defender</h3>
+                    <p>Provides predictable resources for long-term open-source civic technology development.</p>
+                    <div class="custom-funding-input">
+                        <span>KES</span>
+                        <input type="number" value="3500" min="200" aria-label="Custom monthly contribution amount">
+                    </div>
+                </div>
+                <a href="checkout.html?mode=monthly&amp;amt=3500" class="btn btn-primary payment-trigger" style="width: 100%;">Authorize Monthly Path</a>
+            </div>
+
+            <div class="tier-card">
+                <div class="tier-header">
+                    <h3>Civic Stakeholder</h3>
+                    <p>Helps cover hosting infrastructure costs and deep structural training programs for local communities.</p>
+                    <div class="custom-funding-input">
+                        <span>KES</span>
+                        <input type="number" value="15000" min="1000" aria-label="Custom civic contribution amount">
+                    </div>
+                </div>
+                <a href="checkout.html?mode=civic&amp;amt=15000" class="btn btn-outline payment-trigger">Execute Strategic Transfer</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="transparency" class="container style-fallback-container" style="margin-bottom: 120px;">
+        <div class="transparency-wrap">
+            <div style="text-align:center; max-width:600px; margin: 0 auto 40px auto;">
+                <span class="badge badge-blue">Real-Time Ledger</span>
+                <h3 style="font-size:1.75rem; margin-bottom:12px;">Resource Utilization Ledger</h3>
+                <p style="color:var(--text-secondary); font-size:0.95rem;">Clear verification records showing exactly where every penny is spent. Updated monthly for complete transparency.</p>
+            </div>
+
+            <div class="ledger-row header">
+                <div>Operational Pipeline Target</div>
+                <div style="text-align: right;">Allocated</div>
+                <div style="text-align: right;">Status</div>
+            </div>
+            <div class="ledger-row">
+                <div>Public API Host Nodes &amp; Diagnostic Log Buffers</div>
+                <div style="text-align: right; font-family: var(--font-mono);">32.5%</div>
+                <div style="text-align: right; color: var(--accent-green);">Active</div>
+            </div>
+            <div class="ledger-row">
+                <div>Localized Curriculum Translation &amp; School Asset Toolkits</div>
+                <div style="text-align: right; font-family: var(--font-mono);">45.0%</div>
+                <div style="text-align: right; color: var(--accent-green);">Deployed</div>
+            </div>
+            <div class="ledger-row">
+                <div>Core Security Engineering &amp; Fraud Validation Audits</div>
+                <div style="text-align: right; font-family: var(--font-mono);">22.5%</div>
+                <div style="text-align: right; color: var(--accent-blue);">In Progress</div>
+            </div>
+            <div class="ledger-row footer">
+                <div>Total Allocation Audited Balance</div>
+                <div style="text-align: right; font-family: var(--font-mono);">100%</div>
+                <div style="text-align: right; color: var(--accent-cyan);">Verified</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--bg-secondary); border-y:1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-green">Ethical Axioms</span>
+                <h2 class="section-title">The Public-Interest Mandate</h2>
+                <p class="section-subtitle">Why an independent, citizen-funded defense layout is essential to outpace modern digital threat networks.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px;">
+                <div>
+                    <h4 style="font-size:1.2rem; margin-bottom:12px;">Preventing Social Exploitation</h4>
+                    <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">Modern scams focus heavily on human behavior. By funding open education, you help build a strong community defense line that security software alone cannot provide.</p>
+                </div>
+                <div>
+                    <h4 style="font-size:1.2rem; margin-bottom:12px;">Completely Ad-Free Experience</h4>
+                    <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">Our portals operate without corporate ad trackers or monetization systems, protecting your data privacy from commercial network exploitation.</p>
+                </div>
+                <div>
+                    <h4 style="font-size:1.2rem; margin-bottom:12px;">Vulnerable Group Protection</h4>
+                    <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">Your support allows us to deliver specialized safety toolkits directly to small business circles and rural communities at absolutely zero cost to them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <div class="section-header">
+            <span class="badge badge-cyan">Security Assured</span>
+            <h2 class="section-title">Protection &amp; Verification Safeguards</h2>
+            <p class="section-subtitle">We protect your identity and transaction details with the same high standards we use across our entire security platform.</p>
+        </div>
+
+        <div class="assurance-matrix">
+            <div class="assurance-node">
+                <svg class="assurance-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                <div>
+                    <h4 style="margin-bottom:6px;">Encrypted Transactions</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">All donation processing steps use secure, end-to-end tokenized networks to prevent credential leaks or exposure.</p>
+                </div>
+            </div>
+            <div class="assurance-node">
+                <svg class="assurance-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5l1.172-1.172m3.022-1.142a4 4 0 005.656-5l-1.172 1.172" /></svg>
+                <div>
+                    <h4 style="margin-bottom:6px;">Absolute Privacy Guarantee</h4>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">We never lease, share, or sell contributor logs or organizational registry items to external marketing networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 120px;">
+        <div class="sponsor-box">
+            <div>
+                <span class="badge badge-blue">Corporate Alignment</span>
+                <h3 style="font-size:1.85rem; font-weight:700; margin-bottom:16px;">Enterprise Alignment &amp; ESG Partnerships</h3>
+                <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:24px;">Align your organization's corporate social responsibility initiatives with real-world digital safety programs. We provide verifiable compliance dashboards, security impact tracking, and tailored tool bundles for local community groups.</p>
+                <div style="font-family:var(--font-mono); font-size:0.85rem; color:var(--accent-cyan);">Contact Matrix: partnerships@safety.citizen.go.ke</div>
+            </div>
+            <div>
+                <a href="contact.html?intent=partnership" class="btn btn-outline" style="padding:16px; margin-bottom:16px;">Request Partnership Package</a>
+                <a href="about.html" class="btn btn-secondary" style="width:100%; font-size:0.9rem;">Review Governance Model</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="section-header">
+            <span class="badge badge-cyan">Common Inquiries</span>
+            <h2 class="section-title">Funding Governance FAQ</h2>
+            <p class="section-subtitle">Clear, straightforward answers about our financial processes, management, and verification practices.</p>
+        </div>
+
+        <div class="faq-wrapper">
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    How can I verify that my donation is used effectively?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>We publish comprehensive operational updates every single month. These resource reviews match project spending directly against active code updates and community training sessions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    Are recurring monthly support tracks optional?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>Yes. You can pause, adjust, or cancel your monthly support plan instantly at any time through your automated dashboard link without any complex retention loops.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                    Can public institutions or government setups participate?
+                    <svg class="faq-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="faq-content">
+                    <p>Absolutely. We accept formal grants and joint funding collaborations from civic organizations, state safety groups, and academic networks that align with our core transparency rules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: linear-gradient(90deg, #0f172a 0%, #061f2d 100%); text-align: center;">
+        <div class="container">
+            <h2 style="font-size:2.25rem; font-weight:700; margin-bottom:16px;">Help Build a Resilient Digital Space</h2>
+            <p style="color:var(--text-secondary); max-width:640px; margin:0 auto 32px auto; font-size:1.1rem;">Your optional support keeps these safety tools free, independent, and open for everyone across our communities.</p>
+            <a href="#contribute" class="btn btn-primary">Choose Contribution Level</a>
+        </div>
+    </section>
+
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo-area" style="margin-bottom: 20px;">
+                        <svg class="logo-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                        <span class="logo-text">CITIZEN<span style="color: var(--accent-cyan);">SAFETY</span></span>
+                    </a>
+                    <p style="font-size:0.9rem; line-height:1.65; color:var(--text-secondary);">An independent, community-backed initiative focused on providing practical, objective cyber defense tools and scam education without corporate trackers or vendor bias.</p>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Academy Hubs</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#emergency">Emergency Support Portal</a></li>
+                        <li><a href="library.html">Threat Database Repository</a></li>
+                        <li><a href="tools.html">Cryptographic Query Systems</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Platform Roots</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Strategy &amp; Vision</a></li>
+                        <li><a href="services.html">Bespoke Enterprise Support</a></li>
+                        <li><a href="legal/privacy.html">Data Retention Protocols</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="footer-heading">Compliance Sync</h5>
+                    <ul class="footer-links">
+                        <li><a href="legal/terms.html">Usage Boundary Conditions</a></li>
+                        <li><a href="legal/liability.html">Liability Disclaimers</a></li>
+                        <li><a href="partners/government.html">State Security Operations</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Citizen Safety Ecosystem. Supported voluntarily by open citizens. Built to KeCIRT / NIST cyber-hygiene baselines.</p>
+                <a href="#" style="color: var(--text-muted); text-decoration:none;">Apex Interface Anchor &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Switcher Layer Handler
+            const themeToggle = document.getElementById('themeToggle');
+            const cachedTheme = localStorage.getItem('sustainability-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', cachedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const activeTheme = document.documentElement.getAttribute('data-theme');
+                const switchTarget = activeTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', switchTarget);
+                localStorage.setItem('sustainability-theme', switchTarget);
+            });
+
+            // Smooth Accordion Animation Controller
+            const accordionButtons = document.querySelectorAll('.faq-trigger');
+            accordionButtons.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const blockItem = trigger.parentElement;
+                    const isActive = blockItem.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                    document.querySelectorAll('.faq-trigger').forEach(el => el.setAttribute('aria-expanded', 'false'));
+                    
+                    if (!isActive) {
+                        blockItem.classList.add('active');
+                        trigger.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Dynamic Input Value Sync Handler for Donation Checkouts
+            const tierCards = document.querySelectorAll('.tier-card');
+            tierCards.forEach(card => {
+                const inputField = card.querySelector('input');
+                const checkoutButton = card.querySelector('.payment-trigger');
+                
+                if (inputField && checkoutButton) {
+                    const originalUrl = checkoutButton.getAttribute('href');
+                    
+                    inputField.addEventListener('input', () => {
+                        const parsedValue = parseInt(inputField.value, 10) || 0;
+                        const baselineUrl = originalUrl.split('&amt=')[0];
+                        checkoutButton.setAttribute('href', `${baselineUrl}&amt=${parsedValue}`);
+                    });
+                }
+            });
+
+            // Key Intercept Global Routine for Quick Search Launch
+            document.addEventListener('keydown', (event) => {
+                if (event.key === '/') {
+                    event.preventDefault();
+                    alert("System Matrix: Global indexing node is rebuilding database records.");
+                }
+            });
+
+            // Mobile Responsive Menu Toggle Handler
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinksContainer = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navLinksContainer.style.display === 'flex';
+                if (isOpen) {
+                    navLinksContainer.style.display = 'none';
+                } else {
+                    navLinksContainer.style.display = 'flex';
+                    navLinksContainer.style.flexDirection = 'column';
+                    navLinksContainer.style.position = 'absolute';
+                    navLinksContainer.style.top = '88px';
+                    navLinksContainer.style.left = '0';
+                    navLinksContainer.style.width = '100%';
+                    navLinksContainer.style.backgroundColor = 'var(--bg-secondary)';
+                    navLinksContainer.style.padding = '32px';
+                    navLinksContainer.style.borderBottom = '1px solid var(--border-color)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
